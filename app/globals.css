@@ -3,26 +3,76 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-segoe-ui), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono);
-  --font-glacial: var(--font-glacial);
-  --font-segoe: var(--font-segoe-ui);
-  --font-ubuntu: var(--font-ubuntu);
+  --primary: #4285f4;
+  --primary-foreground: #ffffff;
+  --secondary: #fb542b;
+  --secondary-foreground: #ffffff;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+  --accent: #e8f0fe;
+  --accent-foreground: #1a73e8;
+  --border: #e5e5e5;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #8ab4f8;
+    --primary-foreground: #0a0a0a;
+    --secondary: #ff9c7e;
+    --secondary-foreground: #0a0a0a;
+    --muted: #262626;
+    --muted-foreground: #a3a3a3;
+    --accent: #174ea6;
+    --accent-foreground: #d2e3fc;
+    --border: #404040;
   }
 }
 
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+
+  --color-google-50: #e8f0fe;
+  --color-google-100: #d2e3fc;
+  --color-google-200: #aecbfa;
+  --color-google-300: #8ab4f8;
+  --color-google-400: #669df6;
+  --color-google-500: #4285f4;
+  --color-google-600: #1a73e8;
+  --color-google-700: #1967d2;
+  --color-google-800: #185abc;
+  --color-google-900: #174ea6;
+
+  --color-brave-50: #fff0ec;
+  --color-brave-100: #ffdfd5;
+  --color-brave-200: #ffbfaa;
+  --color-brave-300: #ff9c7e;
+  --color-brave-400: #ff7852;
+  --color-brave-500: #fb542b;
+  --color-brave-600: #e6421c;
+  --color-brave-700: #cc3614;
+  --color-brave-800: #b32c10;
+  --color-brave-900: #99230d;
+
+  --font-sans: var(--font-segoe-ui);
+  --font-mono: var(--font-geist-mono);
+  --font-glacial: var(--font-glacial);
+  --font-segoe: var(--font-segoe-ui);
+  --font-ubuntu: var(--font-ubuntu);
+}
+
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
 }
