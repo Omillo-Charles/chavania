@@ -14,20 +14,19 @@
   --border: #e5e5e5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --primary: #8ab4f8;
-    --primary-foreground: #0a0a0a;
-    --secondary: #ff9c7e;
-    --secondary-foreground: #0a0a0a;
-    --muted: #262626;
-    --muted-foreground: #a3a3a3;
-    --accent: #174ea6;
-    --accent-foreground: #d2e3fc;
-    --border: #404040;
-  }
+
+:root.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --primary: #8ab4f8;
+  --primary-foreground: #0a0a0a;
+  --secondary: #ff9c7e;
+  --secondary-foreground: #0a0a0a;
+  --muted: #262626;
+  --muted-foreground: #a3a3a3;
+  --accent: #174ea6;
+  --accent-foreground: #d2e3fc;
+  --border: #404040;
 }
 
 @theme inline {
