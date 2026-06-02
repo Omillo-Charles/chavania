@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { glacialIndifference, segoeUI, ubuntu } from "../utils/fonts";
+import { ThemeProvider } from "../utils/themeContext";
+import Navbar from "@/components/ui/Navbar";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,7 +30,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${glacialIndifference.variable} ${segoeUI.variable} ${ubuntu.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        <ThemeProvider>
+          <Navbar />
+          <main className="flex-1 flex flex-col">
+            {children}
+          </main>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
