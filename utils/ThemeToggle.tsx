@@ -31,7 +31,7 @@ export default function ThemeToggle() {
           <Moon className="w-5 h-5 group-hover:scale-110 transition-transform" />
         )}
       </div>
-      <span className="text-[10px] font-medium uppercase tracking-wider">
+      <span className="text-[10px] font-medium lowercase lg:uppercase tracking-wider">
         {theme === 'dark' ? 'Light' : 'Dark'}
       </span>
     </button>
