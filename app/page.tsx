@@ -65,7 +65,7 @@ export default function Home() {
                 </button>
               </div>
 
-              <button className="px-5 py-1.5 bg-primary text-primary-foreground font-bold rounded-full hover:bg-primary/90 disabled:opacity-50 transition-colors">
+              <button disabled className="px-5 py-1.5 bg-primary text-primary-foreground font-bold rounded-full hover:bg-primary/90 disabled:opacity-50 transition-colors">
                 Post
               </button>
             </div>
