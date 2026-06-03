@@ -92,7 +92,7 @@ export default function Navbar() {
 
             {/* Icons */}
             <div className="flex items-center gap-5">
-              <Link href="/profile" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors group">
+              <Link href="/profile/auth" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors group">
                 <User className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 <span className="text-[10px] font-medium uppercase tracking-wider">Profile</span>
               </Link>
@@ -132,7 +132,7 @@ export default function Navbar() {
 
             {/* Icons */}
             <div className="flex items-center gap-4">
-              <Link href="/profile" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/profile/auth" className="text-muted-foreground hover:text-primary transition-colors">
                 <User className="w-6 h-6" />
               </Link>
               <Link href="/wishlist" className="text-muted-foreground hover:text-primary transition-colors relative">
