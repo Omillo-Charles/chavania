@@ -1,13 +1,14 @@
 "use client";
 
 import React from 'react';
-import { Store, Tag, User, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { Store, Tag, User, ChevronRight } from 'lucide-react';
+import VerificationCheck from '../features/verificationCheck';
 
 const POPULAR_STORES = [
-  { name: 'TechHaven Official', followers: '12.4k', verified: true },
-  { name: 'SneakerHeadz', followers: '8.2k', verified: true },
-  { name: 'Home Essentials', followers: '45.1k', verified: false },
-  { name: 'Glamour Beauty', followers: '3.9k', verified: true },
+  { name: 'TechHaven Official', followers: '12.4k', verified: 'blue' as const },
+  { name: 'SneakerHeadz', followers: '8.2k', verified: 'blue' as const },
+  { name: 'Home Essentials', followers: '45.1k', verified: 'gold' as const },
+  { name: 'Glamour Beauty', followers: '3.9k', verified: 'blue' as const },
 ];
 
 const POPULAR_BRANDS = [
@@ -35,7 +36,7 @@ export default function RightSidebar() {
                 <div className="flex flex-col">
                   <span className="text-sm font-semibold text-foreground flex items-center gap-1">
                     {store.name}
-                    {store.verified && <CheckCircle2 className="w-3.5 h-3.5 text-blue-500" />}
+                    {store.verified && <VerificationCheck type={store.verified} className="w-4 h-4" />}
                   </span>
                   <span className="text-xs text-muted-foreground">{store.followers} followers</span>
                 </div>
