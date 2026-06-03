@@ -27,7 +27,7 @@ export default function Navbar() {
   }, [isMobileSearchOpen]);
 
   return (
-    <header className="w-full border-b border-border bg-background relative z-50">
+    <header className="w-full border-b border-border bg-background sticky top-0 z-50">
       {/* Top Level - Support / Contact (Desktop Only) */}
       <div className="hidden lg:flex w-full bg-muted/30 py-1.5 px-6 items-center justify-between text-xs text-muted-foreground border-b border-border/50">
         {/* Left Content */}
