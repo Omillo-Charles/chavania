@@ -6,6 +6,7 @@ import {
   ChevronDown, HelpCircle, ArrowRight, Send, Clock, User, 
   Building, CheckCircle, RefreshCw 
 } from 'lucide-react';
+import Footer from '@/components/ui/Footer';
 
 const CONTACT_DEPARTMENTS = [
   {
@@ -368,7 +369,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-
+      <Footer />
     </div>
   );
 }

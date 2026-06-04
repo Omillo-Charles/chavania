@@ -7,15 +7,15 @@ import VerificationCheck from '../features/verificationCheck';
 const POPULAR_STORES = [
   { name: 'TechHaven Official', followers: '12.4k', verified: 'blue' as const },
   { name: 'SneakerHeadz', followers: '8.2k', verified: 'blue' as const },
-  { name: 'Home Essentials', followers: '45.1k', verified: 'gold' as const },
+  { name: 'Home Essentials', followers: '45.1k', verified: 'blue' as const },
   { name: 'Glamour Beauty', followers: '3.9k', verified: 'blue' as const },
 ];
 
 const POPULAR_BRANDS = [
-  { name: 'Apple', items: '1,204 items' },
-  { name: 'Nike', items: '842 items' },
-  { name: 'Samsung', items: '931 items' },
-  { name: 'Sony', items: '412 items' },
+  { name: 'Apple', items: '1,204 items', verified: 'gold' as const },
+  { name: 'Nike', items: '842 items', verified: 'gold' as const },
+  { name: 'Samsung', items: '931 items', verified: 'gold' as const },
+  { name: 'Sony', items: '412 items', verified: 'gold' as const },
 ];
 
 
@@ -60,7 +60,10 @@ export default function RightSidebar() {
                   <Tag className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-sm font-semibold text-foreground">{brand.name}</span>
+                  <span className="text-sm font-semibold text-foreground flex items-center gap-1">
+                    {brand.name}
+                    {brand.verified && <VerificationCheck type={brand.verified} className="w-4 h-4" />}
+                  </span>
                   <span className="text-xs text-muted-foreground">{brand.items}</span>
                 </div>
               </div>
