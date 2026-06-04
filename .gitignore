@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# backend files and folders
+dotSokoAPI
+/dotSokoAPI
