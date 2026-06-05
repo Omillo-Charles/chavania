@@ -8,7 +8,7 @@ import {
     ShoppingBag,
     MapPin,
     User,
-    Heart,
+    Bookmark,
     Bell,
     Settings,
     LogOut,
@@ -19,7 +19,7 @@ export const MENU_ITEMS = [
     { name: 'Dashboard', icon: LayoutDashboard, href: '/profile/buyer' },
     { name: 'My Orders', icon: ShoppingBag, href: '/profile/buyer/orders' },
     { name: 'My Addresses', icon: MapPin, href: '/profile/buyer/addresses' },
-    { name: 'Wishlist', icon: Heart, href: '/profile/buyer/wishlist' },
+    { name: 'Wishlist', icon: Bookmark, href: '/profile/buyer/wishlist' },
     { name: 'Notifications', icon: Bell, href: '/profile/buyer/notifications' },
     { name: 'Account Settings', icon: User, href: '/profile/buyer/settings' },
 ];

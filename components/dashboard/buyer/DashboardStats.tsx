@@ -1,12 +1,12 @@
 "use client";
 
 import React from 'react';
-import { ShoppingCart, Package, Heart, CreditCard } from 'lucide-react';
+import { ShoppingCart, Package, Bookmark, CreditCard } from 'lucide-react';
 
 const STATS = [
   { label: 'Total Orders', value: '12', icon: ShoppingCart, color: 'text-blue-600 dark:text-blue-400', bg: 'bg-blue-500/10' },
   { label: 'Pending Delivery', value: '2', icon: Package, color: 'text-orange-600 dark:text-orange-400', bg: 'bg-orange-500/10' },
-  { label: 'Wishlist Items', value: '24', icon: Heart, color: 'text-red-600 dark:text-red-400', bg: 'bg-red-500/10' },
+  { label: 'Wishlist Items', value: '24', icon: Bookmark, color: 'text-red-600 dark:text-red-400', bg: 'bg-red-500/10' },
   { label: 'Total Spent', value: 'KES 124,000', icon: CreditCard, color: 'text-green-600 dark:text-green-400', bg: 'bg-green-500/10' },
 ];
 
