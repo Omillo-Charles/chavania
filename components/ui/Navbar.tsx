@@ -2,12 +2,29 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { Search, User, Bookmark, ShoppingCart, HelpCircle, Grid, Tag, Store, X } from 'lucide-react';
+import { Search, User, Bookmark, ShoppingCart, HelpCircle, Grid, Tag, Store, X, ChevronDown, LayoutDashboard, Store as MerchantIcon, LogOut } from 'lucide-react';
 import ThemeToggle from '../../utils/ThemeToggle';
 
 export default function Navbar() {
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
+  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
+  const profileDropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown on click outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (profileDropdownRef.current && !profileDropdownRef.current.contains(event.target as Node)) {
+        setIsProfileDropdownOpen(false);
+      }
+    }
+    if (isProfileDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isProfileDropdownOpen]);
 
   // Close search on click outside
   useEffect(() => {
@@ -92,10 +109,50 @@ export default function Navbar() {
 
             {/* Icons */}
             <div className="flex items-center gap-5">
-              <Link href="/profile/auth" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors group">
-                <User className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span className="text-[10px] font-medium uppercase tracking-wider">Profile</span>
-              </Link>
+              <div className="relative" ref={profileDropdownRef}>
+                <div className="flex items-center">
+                  <Link href="/profile/auth" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors group">
+                    <User className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                    <span className="text-[10px] font-medium uppercase tracking-wider">Profile</span>
+                  </Link>
+                  <button
+                    onClick={() => setIsProfileDropdownOpen(!isProfileDropdownOpen)}
+                    className={`ml-1 p-1 rounded-full hover:bg-muted transition-colors ${isProfileDropdownOpen ? 'text-primary bg-muted' : 'text-muted-foreground'}`}
+                  >
+                    <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${isProfileDropdownOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                </div>
+
+                {/* Profile Dropdown */}
+                {isProfileDropdownOpen && (
+                  <div className="absolute right-0 mt-3 w-48 bg-background border border-border rounded-xl shadow-xl py-2 z-50 animate-in fade-in zoom-in-95 duration-100">
+                    <Link
+                      href="/profile/buyer"
+                      onClick={() => setIsProfileDropdownOpen(false)}
+                      className="flex items-center gap-3 px-4 py-2.5 text-sm text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
+                    >
+                      <LayoutDashboard className="w-4 h-4" />
+                      <span className="font-medium">Buyer Portal</span>
+                    </Link>
+                    <Link
+                      href="/profile/merchant"
+                      onClick={() => setIsProfileDropdownOpen(false)}
+                      className="flex items-center gap-3 px-4 py-2.5 text-sm text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
+                    >
+                      <MerchantIcon className="w-4 h-4" />
+                      <span className="font-medium">Merchant Portal</span>
+                    </Link>
+                    <div className="h-px bg-border my-1 mx-2"></div>
+                    <button
+                      className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-secondary hover:bg-secondary/5 transition-colors"
+                    >
+                      <LogOut className="w-4 h-4" />
+                      <span className="font-medium">Logout</span>
+                    </button>
+                  </div>
+                )}
+              </div>
+
               <Link href="/wishlist" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors group">
                 <div className="relative">
                   <Bookmark className="w-5 h-5 group-hover:scale-110 transition-transform" />
