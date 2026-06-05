@@ -57,6 +57,10 @@ const CONTACT_DEPARTMENTS = [
 
 const FAQS = [
   {
+    question: "Welcome to .soko!",
+    answer: "Enjoy free shipping on all orders over KES 5,000."
+  },
+  {
     question: "How do I start selling on dotSoko?",
     answer: "Getting started is simple! Click the 'Profile' icon in the navbar, toggle to 'Sign Up', and select 'Merchant Account'. Once your email and business details are verified, you can immediately begin listing products and customized store configurations."
   },

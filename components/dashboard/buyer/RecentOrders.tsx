@@ -4,9 +4,9 @@ import React from 'react';
 import { ExternalLink, Clock, CheckCircle2, Truck } from 'lucide-react';
 
 const RECENT_ORDERS = [
-  { id: '#ORD-7721', date: 'Oct 12, 2023', status: 'Delivered', total: '$129.00', items: 2 },
-  { id: '#ORD-8812', date: 'Oct 15, 2023', status: 'In Transit', total: '$45.00', items: 1 },
-  { id: '#ORD-9901', date: 'Oct 18, 2023', status: 'Processing', total: '$210.00', items: 3 },
+  { id: '#ORD-7721', date: 'Oct 12, 2023', status: 'Delivered', total: 'KES 12,900', items: 2 },
+  { id: '#ORD-8812', date: 'Oct 15, 2023', status: 'In Transit', total: 'KES 4,500', items: 1 },
+  { id: '#ORD-9901', date: 'Oct 18, 2023', status: 'Processing', total: 'KES 21,000', items: 3 },
 ];
 
 const getStatusStyles = (status: string) => {

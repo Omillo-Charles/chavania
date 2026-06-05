@@ -43,9 +43,9 @@ const FILTERS = [
   { name: 'Best Ratings', icon: Star },
   { name: 'Discounted', icon: Tag },
   { name: 'Free Shipping', icon: Truck },
-  { name: 'Under $50', icon: Filter },
-  { name: '$50 - $100', icon: Filter },
-  { name: 'Over $100', icon: Filter },
+  { name: 'Under KES 5,000', icon: Filter },
+  { name: 'KES 5,000 - KES 10,000', icon: Filter },
+  { name: 'Over KES 10,000', icon: Filter },
   { name: 'Local Sellers', icon: HomeIcon },
   { name: 'New Arrivals', icon: Star },
 ];

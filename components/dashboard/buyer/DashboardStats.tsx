@@ -7,7 +7,7 @@ const STATS = [
   { label: 'Total Orders', value: '12', icon: ShoppingCart, color: 'text-blue-600 dark:text-blue-400', bg: 'bg-blue-500/10' },
   { label: 'Pending Delivery', value: '2', icon: Package, color: 'text-orange-600 dark:text-orange-400', bg: 'bg-orange-500/10' },
   { label: 'Wishlist Items', value: '24', icon: Heart, color: 'text-red-600 dark:text-red-400', bg: 'bg-red-500/10' },
-  { label: 'Total Spent', value: '$1,240', icon: CreditCard, color: 'text-green-600 dark:text-green-400', bg: 'bg-green-500/10' },
+  { label: 'Total Spent', value: 'KES 124,000', icon: CreditCard, color: 'text-green-600 dark:text-green-400', bg: 'bg-green-500/10' },
 ];
 
 export default function DashboardStats() {

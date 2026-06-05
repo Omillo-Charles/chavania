@@ -50,7 +50,7 @@ export default function Navbar() {
         {/* Left Content */}
         <div className="flex items-center gap-2">
           <span className="text-primary font-medium font-ubuntu">Welcome to .soko!</span>
-          <span className="hidden xl:inline-block">Enjoy free shipping on all orders over $50.</span>
+          <span className="hidden xl:inline-block">Enjoy free shipping on all orders over KES 5,000.</span>
         </div>
 
         {/* Right Content */}
