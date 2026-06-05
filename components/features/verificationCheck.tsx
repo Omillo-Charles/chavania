@@ -13,7 +13,7 @@ export default function VerificationCheck({ className = 'w-5 h-5', type = 'blue'
 
     const isGold = type === 'gold';
     const fillColor = isGold ? '#fdc700ff' : '#1d9bf0';
-    const bgPath = isGold ? squirclePath : rosettePath;
+    const bgPath = rosettePath;
 
     return (
         <svg
