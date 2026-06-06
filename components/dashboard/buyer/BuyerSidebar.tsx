@@ -12,11 +12,13 @@ import {
     Bell,
     Settings,
     LogOut,
-    ChevronRight
+    ChevronRight,
+    ShoppingCart
 } from 'lucide-react';
 
 export const MENU_ITEMS = [
     { name: 'Dashboard', icon: LayoutDashboard, href: '/profile/buyer' },
+    { name: 'My Cart', icon: ShoppingCart, href: '/profile/buyer/cart' },
     { name: 'My Orders', icon: ShoppingBag, href: '/profile/buyer/orders' },
     { name: 'My Addresses', icon: MapPin, href: '/profile/buyer/addresses' },
     { name: 'Wishlist', icon: Bookmark, href: '/profile/buyer/wishlist' },
