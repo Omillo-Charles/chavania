@@ -8,8 +8,10 @@ import ThemeToggle from '../../utils/ThemeToggle';
 export default function Navbar() {
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+  const [isMobileProfileDropdownOpen, setIsMobileProfileDropdownOpen] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const profileDropdownRef = useRef<HTMLDivElement>(null);
+  const mobileProfileDropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown on click outside
   useEffect(() => {
@@ -17,14 +19,17 @@ export default function Navbar() {
       if (profileDropdownRef.current && !profileDropdownRef.current.contains(event.target as Node)) {
         setIsProfileDropdownOpen(false);
       }
+      if (mobileProfileDropdownRef.current && !mobileProfileDropdownRef.current.contains(event.target as Node)) {
+        setIsMobileProfileDropdownOpen(false);
+      }
     }
-    if (isProfileDropdownOpen) {
+    if (isProfileDropdownOpen || isMobileProfileDropdownOpen) {
       document.addEventListener("mousedown", handleClickOutside);
     }
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isProfileDropdownOpen]);
+  }, [isProfileDropdownOpen, isMobileProfileDropdownOpen]);
 
   // Close search on click outside
   useEffect(() => {
@@ -50,7 +55,7 @@ export default function Navbar() {
         {/* Left Content */}
         <div className="flex items-center gap-2">
           <span className="text-primary font-medium font-ubuntu">Welcome to .soko!</span>
-          <span className="hidden xl:inline-block">Enjoy free shipping on all orders over KES 5,000.</span>
+          <span className="hidden xl:inline-block">Enjoy free shipping on all orders over KES 30,000.</span>
         </div>
 
         {/* Right Content */}
@@ -153,14 +158,14 @@ export default function Navbar() {
                 )}
               </div>
 
-              <Link href="/wishlist" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors group">
+              <Link href="/profile/buyer/wishlist" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors group">
                 <div className="relative">
                   <Bookmark className="w-5 h-5 group-hover:scale-110 transition-transform" />
                   <span className="absolute -top-2 -right-2 bg-secondary text-secondary-foreground text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">0</span>
                 </div>
                 <span className="text-[10px] font-medium uppercase tracking-wider">Wishlist</span>
               </Link>
-              <Link href="/cart" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors group">
+              <Link href="/profile/buyer/cart" className="flex flex-col items-center gap-1 text-muted-foreground hover:text-primary transition-colors group">
                 <div className="relative">
                   <ShoppingCart className="w-5 h-5 group-hover:scale-110 transition-transform" />
                   <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">0</span>
@@ -189,9 +194,48 @@ export default function Navbar() {
 
             {/* Icons */}
             <div className="flex items-center gap-4">
-              <Link href="/profile/auth" className="text-muted-foreground hover:text-primary transition-colors">
-                <User className="w-6 h-6" />
-              </Link>
+              <div className="relative" ref={mobileProfileDropdownRef}>
+                <div className="flex items-center">
+                  <Link href="/profile/auth" className="text-muted-foreground hover:text-primary transition-colors">
+                    <User className="w-6 h-6" />
+                  </Link>
+                  <button
+                    onClick={() => setIsMobileProfileDropdownOpen(!isMobileProfileDropdownOpen)}
+                    className={`ml-0.5 p-1 rounded-full hover:bg-muted transition-colors ${isMobileProfileDropdownOpen ? 'text-primary bg-muted' : 'text-muted-foreground'}`}
+                  >
+                    <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${isMobileProfileDropdownOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                </div>
+
+                {/* Mobile Profile Dropdown */}
+                {isMobileProfileDropdownOpen && (
+                  <div className="absolute right-0 mt-3 w-48 bg-background border border-border rounded-xl shadow-xl py-2 z-50 animate-in fade-in zoom-in-95 duration-100">
+                    <Link
+                      href="/profile/buyer"
+                      onClick={() => setIsMobileProfileDropdownOpen(false)}
+                      className="flex items-center gap-3 px-4 py-2.5 text-sm text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
+                    >
+                      <LayoutDashboard className="w-4 h-4" />
+                      <span className="font-medium">Buyer Portal</span>
+                    </Link>
+                    <Link
+                      href="/profile/merchant"
+                      onClick={() => setIsMobileProfileDropdownOpen(false)}
+                      className="flex items-center gap-3 px-4 py-2.5 text-sm text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
+                    >
+                      <MerchantIcon className="w-4 h-4" />
+                      <span className="font-medium">Merchant Portal</span>
+                    </Link>
+                    <div className="h-px bg-border my-1 mx-2"></div>
+                    <button
+                      className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-secondary hover:bg-secondary/5 transition-colors text-left"
+                    >
+                      <LogOut className="w-4 h-4" />
+                      <span className="font-medium">Logout</span>
+                    </button>
+                  </div>
+                )}
+              </div>
               <Link href="/wishlist" className="text-muted-foreground hover:text-primary transition-colors relative">
                 <Bookmark className="w-6 h-6" />
                 <span className="absolute -top-1.5 -right-1.5 bg-secondary text-secondary-foreground text-[9px] font-bold w-4 h-4 flex items-center justify-center rounded-full">0</span>
