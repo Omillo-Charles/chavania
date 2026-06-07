@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import { CATEGORIES, FILTERS } from '@/utils/categories';
 
 export default function LeftSidebar() {
@@ -15,10 +16,13 @@ export default function LeftSidebar() {
           <ul className="space-y-1">
             {CATEGORIES.map((category, idx) => (
               <li key={idx}>
-                <button className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-muted text-foreground hover:text-primary transition-colors text-sm font-medium text-left">
+                <Link
+                  href={`/?category=${category.name.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`}
+                  className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-muted text-foreground hover:text-primary transition-colors text-sm font-medium text-left"
+                >
                   <category.icon className="w-5 h-5 flex-shrink-0" style={{ color: category.color }} fill={category.color} strokeWidth={1.5} />
                   <span className="truncate">{category.name}</span>
-                </button>
+                </Link>
               </li>
             ))}
           </ul>
