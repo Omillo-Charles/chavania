@@ -1,19 +1,17 @@
 "use client";
 
 import React from 'react';
-import { Search, Filter, Plus, ChevronDown } from 'lucide-react';
+import { Filter, Plus, ChevronDown } from 'lucide-react';
+import Searchbar from '../../../features/Searchbar';
 
 export default function ProductFilters() {
   return (
     <div className="flex flex-col lg:flex-row gap-4 items-center justify-between bg-background border border-border p-4 rounded-2xl shadow-sm">
-      <div className="relative w-full lg:w-96">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-        <input 
-          type="text" 
-          placeholder="Search products by name, SKU or category..." 
-          className="w-full pl-10 pr-4 py-2 bg-muted/50 border border-transparent focus:border-secondary/30 focus:bg-background rounded-xl text-sm transition-all outline-none"
-        />
-      </div>
+      <Searchbar
+        placeholder="Search products by name, SKU or category..."
+        className="w-full lg:w-96"
+        inputClassName="bg-muted/50 border border-transparent focus:border-secondary/30 focus:bg-background rounded-xl"
+      />
 
       <div className="flex items-center gap-3 w-full lg:w-auto overflow-x-auto hide-scrollbar">
         <button className="flex items-center gap-2 px-4 py-2 bg-muted hover:bg-muted/80 rounded-xl text-sm font-medium transition-colors whitespace-nowrap">

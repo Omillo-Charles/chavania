@@ -3,8 +3,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Search, Bell, ChevronDown, LogOut, Store, ExternalLink } from 'lucide-react';
+import { Bell, ChevronDown, LogOut, Store, ExternalLink } from 'lucide-react';
 import { MERCHANT_MENU_ITEMS } from './MerchantSidebar';
+import Searchbar from '../../features/Searchbar';
 
 export default function MerchantHeader() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -28,17 +29,14 @@ export default function MerchantHeader() {
   return (
     <header className="h-[72px] border-b border-border bg-background/80 backdrop-blur-md relative lg:sticky lg:top-[104px] z-20 px-4 lg:px-8 flex items-center justify-between">
       <div className="flex items-center gap-4">
-        <div className="relative w-48 sm:w-64 lg:w-96 max-w-full">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-          <input
-            type="text"
-            placeholder="Search orders, products..."
-            className="w-full pl-10 pr-4 py-2 bg-muted/50 border border-transparent focus:border-secondary/30 focus:bg-background rounded-xl text-sm transition-all outline-none"
-          />
-        </div>
-        
-        <Link 
-          href="/" 
+        <Searchbar
+          placeholder="Search orders, products..."
+          className="w-48 sm:w-64 lg:w-96 max-w-full"
+          inputClassName="bg-muted/50 border border-transparent focus:border-secondary/30 focus:bg-background rounded-xl"
+        />
+
+        <Link
+          href="/"
           className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border hover:bg-muted text-xs font-bold text-muted-foreground transition-all"
         >
           View Shop <ExternalLink className="w-3 h-3" />
@@ -54,7 +52,7 @@ export default function MerchantHeader() {
         <div className="h-8 w-[1px] bg-border mx-1 hidden sm:block"></div>
 
         <div className="relative" ref={dropdownRef}>
-          <button 
+          <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             className="flex items-center gap-2 sm:gap-3 p-1.5 sm:pr-3 rounded-xl hover:bg-muted transition-all"
           >
@@ -74,7 +72,7 @@ export default function MerchantHeader() {
                 <p className="text-sm font-bold text-foreground">TechHaven Store</p>
                 <p className="text-[10px] text-muted-foreground uppercase">Gold Merchant</p>
               </div>
-              
+
               <div className="lg:hidden">
                 {MERCHANT_MENU_ITEMS.map((item) => {
                   const isActive = pathname === item.href;
@@ -83,9 +81,8 @@ export default function MerchantHeader() {
                       key={item.name}
                       href={item.href}
                       onClick={() => setIsDropdownOpen(false)}
-                      className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
-                        isActive ? 'text-secondary bg-secondary/5 font-bold' : 'text-muted-foreground hover:bg-muted hover:text-foreground'
-                      }`}
+                      className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${isActive ? 'text-secondary bg-secondary/5 font-bold' : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                        }`}
                     >
                       <item.icon className="w-4 h-4" />
                       <span>{item.name}</span>

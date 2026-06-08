@@ -1,7 +1,8 @@
 "use client";
 
 import React from 'react';
-import { Search, Filter, MoreVertical } from 'lucide-react';
+import { Filter, MoreVertical } from 'lucide-react';
+import Searchbar from '../../../features/Searchbar';
 
 interface Chat {
     id: number;
@@ -30,14 +31,10 @@ export default function ChatSidebar() {
                         <Filter className="w-4 h-4 text-muted-foreground" />
                     </button>
                 </div>
-                <div className="relative">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                    <input
-                        type="text"
-                        placeholder="Search chats..."
-                        className="w-full pl-10 pr-4 py-2 bg-muted/50 border border-transparent focus:border-secondary/30 focus:bg-background rounded-xl text-sm transition-all outline-none"
-                    />
-                </div>
+                <Searchbar
+                    placeholder="Search chats..."
+                    inputClassName="bg-muted/50 border border-transparent focus:border-secondary/30 focus:bg-background rounded-xl"
+                />
             </div>
 
             <div className="flex-1 overflow-y-auto">

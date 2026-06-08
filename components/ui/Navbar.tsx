@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { Search, User, Bookmark, ShoppingCart, HelpCircle, Grid, Tag, Store, X, ChevronDown, LayoutDashboard, Store as MerchantIcon, LogOut } from 'lucide-react';
 import ThemeToggle from '../../utils/ThemeToggle';
+import Searchbar from '../features/Searchbar';
 
 export default function Navbar() {
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
@@ -88,16 +89,11 @@ export default function Navbar() {
           </Link>
 
           {/* Search Bar */}
-          <div className="flex-1 max-w-2xl relative group">
-            <input
-              type="text"
-              placeholder="Search for products, brands and more..."
-              className="w-full bg-muted border border-border rounded-full py-2.5 pl-5 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300"
-            />
-            <button className="absolute right-1 top-1/2 -translate-y-1/2 p-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors">
-              <Search className="w-4 h-4" />
-            </button>
-          </div>
+          <Searchbar
+            placeholder="Search for products, brands and more..."
+            className="flex-1 max-w-2xl"
+            inputClassName="bg-muted border border-border rounded-full py-2.5 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300"
+          />
 
           {/* Links & Actions */}
           <div className="flex items-center gap-8">
@@ -285,21 +281,19 @@ export default function Navbar() {
 
       </div>
 
-      {/* Mobile Search Dropdown */}
       <div
         ref={searchRef}
         className={`lg:hidden absolute left-0 w-full bg-background border-b border-border p-4 shadow-lg transition-all duration-300 origin-top ${isMobileSearchOpen ? "opacity-100 scale-y-100 top-[100%]" : "opacity-0 scale-y-0 -top-full pointer-events-none"
           }`}
       >
         <div className="relative w-full max-w-md mx-auto">
-          <input
-            type="text"
+          <Searchbar
             placeholder="Search products, brands..."
-            className="w-full bg-muted border border-border rounded-full py-3 pl-5 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300"
+            inputClassName="bg-muted border border-border rounded-full py-3 pr-12 focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300"
           />
           <button
             onClick={() => setIsMobileSearchOpen(false)}
-            className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-muted-foreground hover:text-foreground transition-colors"
+            className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-muted-foreground hover:text-foreground transition-colors z-10"
           >
             <X className="w-5 h-5" />
           </button>

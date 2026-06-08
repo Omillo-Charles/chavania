@@ -3,8 +3,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Search, Bell, ChevronDown, LogOut } from 'lucide-react';
+import { Bell, ChevronDown, LogOut } from 'lucide-react';
 import { MENU_ITEMS } from './BuyerSidebar';
+import Searchbar from '../../features/Searchbar';
 
 export default function DashboardHeader() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -28,14 +29,10 @@ export default function DashboardHeader() {
 
   return (
     <header className="h-[72px] border-b border-border bg-background/80 backdrop-blur-md relative lg:sticky lg:top-[104px] z-20 px-4 lg:px-8 flex items-center justify-between">
-      <div className="relative w-48 sm:w-64 lg:w-96 max-w-full">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-        <input
-          type="text"
-          placeholder="Search..."
-          className="w-full pl-10 pr-4 py-2 bg-muted/50 border border-transparent focus:border-primary/30 focus:bg-background rounded-xl text-sm transition-all outline-none"
-        />
-      </div>
+      <Searchbar
+        placeholder="Search..."
+        className="w-48 sm:w-64 lg:w-96 max-w-full"
+      />
 
       <div className="flex items-center gap-2 sm:gap-4">
         <button className="p-2 sm:p-2.5 rounded-xl hover:bg-muted text-muted-foreground hover:text-foreground transition-all relative">

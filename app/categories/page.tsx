@@ -3,7 +3,8 @@
 import React from 'react';
 import { CATEGORIES } from '@/utils/categories';
 import Link from 'next/link';
-import { ArrowRight, Search, LayoutGrid, ArrowLeft } from 'lucide-react';
+import { ArrowRight, LayoutGrid, ArrowLeft } from 'lucide-react';
+import Searchbar from '@/components/features/Searchbar';
 
 export default function CategoriesPage() {
   return (
@@ -24,14 +25,10 @@ export default function CategoriesPage() {
             </h1>
           </div>
 
-          <div className="relative hidden md:block w-80">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-            <input
-              type="text"
-              placeholder="Search categories..."
-              className="w-full pl-10 pr-4 py-2 bg-muted/50 border border-transparent focus:border-primary/30 focus:bg-background rounded-xl text-sm transition-all outline-none"
-            />
-          </div>
+          <Searchbar
+            placeholder="Search categories..."
+            className="hidden md:block w-80"
+          />
         </div>
       </div>
 
