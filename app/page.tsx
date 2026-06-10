@@ -1,9 +1,10 @@
 "use client";
 
+import React from 'react';
 import LeftSidebar from '@/components/ui/LeftSidebar';
 import RightSidebar from '@/components/ui/RightSidebar';
-import { Globe2, Image as ImageIcon, Video, FileText } from 'lucide-react';
 import ProductDisplay, { PostData } from '@/components/features/ProductDisplay';
+import ProductPostInput from '@/components/features/ProductPostInput';
 
 const DUMMY_FEED: PostData[] = [
   {
@@ -98,47 +99,7 @@ export default function Home() {
         </div>
 
         {/* Post Input (X.com style) */}
-        <div className="p-4 border-b border-border flex gap-4">
-          <div className="w-10 h-10 rounded-full bg-primary/20 flex-shrink-0 mt-1"></div>
-          <div className="flex-1">
-            <textarea
-              placeholder="What are you selling today?"
-              className="w-full bg-transparent border-none resize-none focus:outline-none text-lg placeholder:text-muted-foreground placeholder:font-normal py-2 overflow-hidden"
-              rows={2}
-              onInput={(e) => {
-                e.currentTarget.style.height = 'auto';
-                e.currentTarget.style.height = e.currentTarget.scrollHeight + 'px';
-              }}
-            ></textarea>
-
-            {/* Everyone can reply */}
-            <div className="pb-3 border-b border-border/50">
-              <button className="flex items-center gap-1.5 text-primary text-sm font-medium hover:bg-primary/10 px-3 py-0.5 rounded-full transition-colors -ml-3">
-                <Globe2 className="w-4 h-4" />
-                <span>Everyone can resell</span>
-              </button>
-            </div>
-
-            <div className="flex items-center justify-between mt-3">
-              {/* Action Icons */}
-              <div className="flex items-center gap-1 text-primary">
-                <button className="p-2 rounded-full hover:bg-primary/10 transition-colors" aria-label="Image">
-                  <ImageIcon className="w-5 h-5" />
-                </button>
-                <button className="p-2 rounded-full hover:bg-primary/10 transition-colors" aria-label="Video">
-                  <Video className="w-5 h-5" />
-                </button>
-                <button className="p-2 rounded-full hover:bg-primary/10 transition-colors" aria-label="Document">
-                  <FileText className="w-5 h-5" />
-                </button>
-              </div>
-
-              <button disabled className="px-5 py-1.5 bg-primary text-primary-foreground font-bold rounded-full hover:bg-primary/90 disabled:opacity-50 transition-colors">
-                Post
-              </button>
-            </div>
-          </div>
-        </div>
+        <ProductPostInput />
 
         {/* Feed List */}
         <div className="flex flex-col">
