@@ -1,16 +1,84 @@
 "use client";
 
-import React from 'react';
 import LeftSidebar from '@/components/ui/LeftSidebar';
 import RightSidebar from '@/components/ui/RightSidebar';
-import { Share2, Heart, MessageCircle, Repeat2, Bookmark, ShoppingCart, Image as ImageIcon, Video, FileText, Globe2 } from 'lucide-react';
+import { Globe2, Image as ImageIcon, Video, FileText } from 'lucide-react';
+import ProductDisplay, { PostData } from '@/components/features/ProductDisplay';
 
-const DUMMY_FEED = [
-  { id: 1, user: 'SneakerHeadz', handle: '@sneakerheadz', time: '2h', content: 'Just dropped the new Air Max collection! Limited stock available. 👟🔥', likes: 124, comments: 12, retweets: 4 },
-  { id: 2, user: 'TechHaven Official', handle: '@techhaven', time: '4h', content: 'Unboxing the latest smartphone series tomorrow at 10 AM EST. Who is tuning in? 📱👀', likes: 892, comments: 145, retweets: 56 },
-  { id: 3, user: 'Glamour Beauty', handle: '@glamour', time: '5h', content: 'Our summer skincare routine bundle is finally here! Get 20% off using code SUMMER20. ☀️🧴', likes: 432, comments: 23, retweets: 18 },
-  { id: 4, user: 'Alex Johnson', handle: '@alexj', time: '8h', content: 'Just bought my first mechanical keyboard from @techhaven and the switches feel amazing! ⌨️💯', likes: 56, comments: 2, retweets: 1 },
-  { id: 5, user: 'Home Essentials', handle: '@homeessentials', time: '12h', content: 'Transform your living space with our new minimalist furniture collection. Shop now link in bio! 🛋️✨', likes: 321, comments: 45, retweets: 22 },
+const DUMMY_FEED: PostData[] = [
+  {
+    id: 1,
+    user: 'SneakerHeadz',
+    handle: '@sneakerheadz',
+    time: '2h',
+    content: 'Just dropped the new Air Max collection! Limited stock available. 👟🔥',
+    likes: 124,
+    comments: 12,
+    retweets: 4,
+    verified: true,
+    price: 'KES 15,500',
+    media: [
+      { type: 'image', url: '/categories/clothing.jpeg' }
+    ]
+  },
+  {
+    id: 2,
+    user: 'TechHaven Official',
+    handle: '@techhaven',
+    time: '4h',
+    content: 'Unboxing the latest smartphone series tomorrow at 10 AM EST. Who is tuning in? 📱👀',
+    likes: 892,
+    comments: 145,
+    retweets: 56,
+    verified: true,
+    price: 'KES 24,999',
+    media: [
+      { type: 'image', url: '/categories/phones.jpeg' }
+    ]
+  },
+  {
+    id: 3,
+    user: 'Glamour Beauty',
+    handle: '@glamour',
+    time: '5h',
+    content: 'Our summer skincare routine bundle is finally here! Get 20% off using code SUMMER20. ☀️🧴',
+    likes: 432,
+    comments: 23,
+    retweets: 18,
+    price: 'KES 4,200',
+    media: [
+      { type: 'image', url: '/categories/beauty.jpeg' }
+    ]
+  },
+  {
+    id: 4,
+    user: 'Alex Johnson',
+    handle: '@alexj',
+    time: '8h',
+    content: 'Just bought my first mechanical keyboard from @techhaven and the switches feel amazing! ⌨️💯',
+    likes: 56,
+    comments: 2,
+    retweets: 1,
+    price: 'KES 8,500',
+    media: [
+      { type: 'image', url: '/categories/computers.jpeg' }
+    ]
+  },
+  {
+    id: 5,
+    user: 'Home Essentials',
+    handle: '@homeessentials',
+    time: '12h',
+    content: 'Transform your living space with our new minimalist furniture collection. Shop now link in bio! 🛋️✨',
+    likes: 321,
+    comments: 45,
+    retweets: 22,
+    verified: true,
+    price: 'KES 45,000',
+    media: [
+      { type: 'image', url: '/categories/homenkitchen.jpeg' }
+    ]
+  },
 ];
 
 export default function Home() {
@@ -75,83 +143,12 @@ export default function Home() {
         {/* Feed List */}
         <div className="flex flex-col">
           {DUMMY_FEED.map((post) => (
-            <article key={post.id} className="p-4 border-b border-border hover:bg-muted/10 transition-colors cursor-pointer flex gap-3">
-              <div className="w-10 h-10 rounded-full bg-secondary/20 flex-shrink-0 flex items-center justify-center font-bold text-secondary">
-                {post.user[0]}
-              </div>
-              <div className="flex flex-col w-full">
-                <div className="flex items-center gap-1">
-                  <span className="font-bold text-foreground hover:underline">{post.user}</span>
-                  <span className="text-muted-foreground text-sm">{post.handle}</span>
-                  <span className="text-muted-foreground text-sm">· {post.time}</span>
-                </div>
-                <p className="mt-1 text-foreground text-[15px]">{post.content}</p>
-
-                {/* Actions */}
-                <div className="flex items-center justify-between mt-3 text-muted-foreground max-w-md">
-                  <button className="flex items-center gap-1 hover:text-blue-500 transition-colors group">
-                    <div className="p-1.5 rounded-full group-hover:bg-blue-500/10"><MessageCircle className="w-4 h-4" /></div>
-                    <span className="text-xs">{post.comments}</span>
-                  </button>
-                  <button className="flex items-center gap-1 hover:text-green-500 transition-colors group">
-                    <div className="p-1.5 rounded-full group-hover:bg-green-500/10"><Repeat2 className="w-4 h-4" /></div>
-                    <span className="text-xs">{post.retweets}</span>
-                  </button>
-                  <button className="flex items-center gap-1 hover:text-secondary transition-colors group">
-                    <div className="p-1.5 rounded-full group-hover:bg-secondary/10"><Heart className="w-4 h-4" /></div>
-                    <span className="text-xs">{post.likes}</span>
-                  </button>
-                  <button className="flex items-center gap-1 hover:text-primary transition-colors group">
-                    <div className="p-1.5 rounded-full group-hover:bg-primary/10"><ShoppingCart className="w-4 h-4" /></div>
-                  </button>
-                  <button className="flex items-center gap-1 hover:text-primary transition-colors group">
-                    <div className="p-1.5 rounded-full group-hover:bg-primary/10"><Bookmark className="w-4 h-4" /></div>
-                  </button>
-                  <button className="flex items-center gap-1 hover:text-primary transition-colors group">
-                    <div className="p-1.5 rounded-full group-hover:bg-primary/10"><Share2 className="w-4 h-4" /></div>
-                  </button>
-                </div>
-              </div>
-            </article>
+            <ProductDisplay key={post.id} post={post} />
           ))}
 
           {/* Duplicate feed for scrolling effect */}
           {DUMMY_FEED.map((post) => (
-            <article key={`${post.id}-dup`} className="p-4 border-b border-border hover:bg-muted/10 transition-colors cursor-pointer flex gap-3">
-              <div className="w-10 h-10 rounded-full bg-secondary/20 flex-shrink-0 flex items-center justify-center font-bold text-secondary">
-                {post.user[0]}
-              </div>
-              <div className="flex flex-col w-full">
-                <div className="flex items-center gap-1">
-                  <span className="font-bold text-foreground hover:underline">{post.user}</span>
-                  <span className="text-muted-foreground text-sm">{post.handle}</span>
-                  <span className="text-muted-foreground text-sm">· {post.time}</span>
-                </div>
-                <p className="mt-1 text-foreground text-[15px]">{post.content}</p>
-
-                {/* Actions */}
-                <div className="flex items-center justify-between mt-3 text-muted-foreground max-w-md">
-                  <button className="flex items-center gap-1 hover:text-blue-500 transition-colors group">
-                    <div className="p-1.5 rounded-full group-hover:bg-blue-500/10"><MessageCircle className="w-4 h-4" /></div>
-                  </button>
-                  <button className="flex items-center gap-1 hover:text-green-500 transition-colors group">
-                    <div className="p-1.5 rounded-full group-hover:bg-green-500/10"><Repeat2 className="w-4 h-4" /></div>
-                  </button>
-                  <button className="flex items-center gap-1 hover:text-secondary transition-colors group">
-                    <div className="p-1.5 rounded-full group-hover:bg-secondary/10"><Heart className="w-4 h-4" /></div>
-                  </button>
-                  <button className="flex items-center gap-1 hover:text-primary transition-colors group">
-                    <div className="p-1.5 rounded-full group-hover:bg-primary/10"><ShoppingCart className="w-4 h-4" /></div>
-                  </button>
-                  <button className="flex items-center gap-1 hover:text-primary transition-colors group">
-                    <div className="p-1.5 rounded-full group-hover:bg-primary/10"><Bookmark className="w-4 h-4" /></div>
-                  </button>
-                  <button className="flex items-center gap-1 hover:text-primary transition-colors group">
-                    <div className="p-1.5 rounded-full group-hover:bg-primary/10"><Share2 className="w-4 h-4" /></div>
-                  </button>
-                </div>
-              </div>
-            </article>
+            <ProductDisplay key={`${post.id}-dup`} post={post} />
           ))}
         </div>
       </div>
