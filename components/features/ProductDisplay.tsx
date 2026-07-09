@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import {
   MessageCircle,
   Repeat2,
@@ -52,6 +53,7 @@ const formatNumber = (num?: number) => {
 };
 
 export default function ProductDisplay({ post }: ProductDisplayProps) {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isFollowing, setIsFollowing] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
@@ -124,7 +126,10 @@ export default function ProductDisplay({ post }: ProductDisplayProps) {
   }
 
   return (
-    <article className="px-4 pt-3 pb-2 border-b border-border hover:bg-muted/5 transition-colors cursor-pointer flex gap-3 relative">
+    <article 
+      onClick={() => router.push(`/product/${post.id}`)}
+      className="px-4 pt-3 pb-2 border-b border-border hover:bg-muted/5 transition-colors cursor-pointer flex gap-3 relative"
+    >
       {/* Avatar Column */}
       <div className="flex-shrink-0 pt-1">
         {post.avatar ? (
