@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
   MessageCircle,
@@ -36,6 +37,7 @@ export interface PostData {
   retweets?: number;
   media: PostMedia[];
   verified?: boolean;
+  verifiedType?: 'blue' | 'gold';
   price: string;
   avatar?: string;
 }
@@ -61,7 +63,7 @@ export default function ProductDisplay({ post }: ProductDisplayProps) {
   const [isReported, setIsReported] = useState(false);
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-  
+
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -126,7 +128,7 @@ export default function ProductDisplay({ post }: ProductDisplayProps) {
   }
 
   return (
-    <article 
+    <article
       onClick={() => router.push(`/product/${post.id}`)}
       className="px-4 pt-3 pb-2 border-b border-border hover:bg-muted/5 transition-colors cursor-pointer flex gap-3 relative"
     >
@@ -150,15 +152,23 @@ export default function ProductDisplay({ post }: ProductDisplayProps) {
         {/* Header: Name, Handle, Time, More Icon */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1.5 overflow-hidden whitespace-nowrap text-[15px]">
-            <span className="font-bold text-foreground hover:underline truncate">
+            <Link
+              href={`/store/${post.handle.replace('@', '')}`}
+              onClick={(e) => e.stopPropagation()}
+              className="font-bold text-foreground hover:underline truncate"
+            >
               {post.user}
-            </span>
+            </Link>
             {post.verified && (
-              <VerificationCheck className="w-4 h-4" />
+              <VerificationCheck type={post.verifiedType ?? 'blue'} className="w-4 h-4" />
             )}
-            <span className="text-muted-foreground truncate">
+            <Link
+              href={`/store/${post.handle.replace('@', '')}`}
+              onClick={(e) => e.stopPropagation()}
+              className="text-muted-foreground truncate hover:underline"
+            >
               {post.handle}
-            </span>
+            </Link>
             {isFollowing && (
               <span className="text-[10px] bg-primary/10 text-primary font-bold px-1.5 py-0.5 rounded-md shrink-0">
                 Following

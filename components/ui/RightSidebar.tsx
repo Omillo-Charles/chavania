@@ -1,14 +1,15 @@
 "use client";
 
 import React from 'react';
-import { Store, Tag, User, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
+import { Store, Tag, ChevronRight } from 'lucide-react';
 import VerificationCheck from '../features/verificationCheck';
 
 const POPULAR_STORES = [
-  { name: 'TechHaven Official', followers: '12.4k', verified: 'blue' as const },
-  { name: 'SneakerHeadz', followers: '8.2k', verified: 'blue' as const },
-  { name: 'Home Essentials', followers: '45.1k', verified: 'blue' as const },
-  { name: 'Glamour Beauty', followers: '3.9k', verified: 'blue' as const },
+  { name: 'TechHaven Official', handle: 'techhaven', followers: '45.1k', verified: 'blue' as const },
+  { name: 'SneakerHeadz',       handle: 'sneakerheadz', followers: '12.4k', verified: 'blue' as const },
+  { name: 'Home Essentials',    handle: 'homeessentials', followers: '8.2k',  verified: 'blue' as const },
+  { name: 'Glamour Beauty',     handle: 'glamour', followers: '3.9k',  verified: 'blue' as const },
 ];
 
 const POPULAR_BRANDS = [
@@ -28,19 +29,25 @@ export default function RightSidebar() {
         <h2 className="text-lg font-bold text-foreground mb-4 font-ubuntu">Popular Stores</h2>
         <ul className="space-y-4">
           {POPULAR_STORES.map((store, idx) => (
-            <li key={idx} className="flex items-center justify-between group cursor-pointer">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                  <Store className="w-5 h-5" />
+            <li key={idx}>
+              <Link
+                href={`/store/${store.handle}`}
+                className="flex items-center justify-between group cursor-pointer hover:bg-muted/50 rounded-xl p-1.5 -mx-1.5 transition-colors"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <Store className="w-5 h-5" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-semibold text-foreground flex items-center gap-1">
+                      {store.name}
+                      {store.verified && <VerificationCheck type={store.verified} className="w-4 h-4" />}
+                    </span>
+                    <span className="text-xs text-muted-foreground">{store.followers} followers</span>
+                  </div>
                 </div>
-                <div className="flex flex-col">
-                  <span className="text-sm font-semibold text-foreground flex items-center gap-1">
-                    {store.name}
-                    {store.verified && <VerificationCheck type={store.verified} className="w-4 h-4" />}
-                  </span>
-                  <span className="text-xs text-muted-foreground">{store.followers} followers</span>
-                </div>
-              </div>
+                <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+              </Link>
             </li>
           ))}
         </ul>
