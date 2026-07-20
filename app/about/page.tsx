@@ -33,7 +33,7 @@ const CORE_VALUES = [
     },
     {
         title: "Seamless Logistics",
-        description: "With sokoExpress and our integrated local courier network, we bridge the gap between order placement and doorstep delivery.",
+        description: "With chavaniaExpress and our integrated local courier network, we bridge the gap between order placement and doorstep delivery.",
         icon: Zap,
         color: "from-orange-500/10 to-orange-600/5",
         iconColor: "text-orange-500",
@@ -41,9 +41,9 @@ const CORE_VALUES = [
 ];
 
 const MILESTONES = [
-    { year: "2026", title: "The Inception", description: "dotSoko was born from a vision to democratize digital commerce for local businesses." },
+    { year: "2026", title: "The Inception", description: "Chavania was born from a vision to democratize digital commerce for local businesses." },
     { year: "2027", title: "Social Commerce", description: "Launched our interactive buyer feeds and fully customizable merchant storefronts." },
-    { year: "2028", title: "sokoExpress Logistics", description: "Rolled out an integrated fulfillment network reducing delivery times by 40%." },
+    { year: "2028", title: "chavaniaExpress Logistics", description: "Rolled out an integrated fulfillment network reducing delivery times by 40%." },
     { year: "Future", title: "Borderless Trade", description: "Expanding across borders to connect merchants and buyers continent-wide." }
 ];
 
@@ -68,12 +68,12 @@ export default function AboutPage() {
                     <h1 className="text-5xl lg:text-7xl font-bold tracking-tight font-ubuntu mb-8 leading-[1.1] animate-in fade-in slide-in-from-bottom-6 duration-1000">
                         About <br className="hidden sm:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
-                            dotSoko
+                        Chavania
                         </span>
                     </h1>
 
                     <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-150">
-                        We are building the infrastructure for the next generation of trade. dotSoko bridges the gap between fragmented social commerce and rigid giant platforms, giving power back to local merchants and delivering absolute trust to buyers.
+                        We are building the infrastructure for the next generation of trade. Chavania bridges the gap between fragmented social commerce and rigid giant platforms, giving power back to local merchants and delivering absolute trust to buyers.
                     </p>
                 </div>
             </section>
@@ -94,7 +94,7 @@ export default function AboutPage() {
                                 For too long, businesses had to choose between building an isolated storefront that struggles to get traffic, or listing on a massive marketplace where their brand gets lost among millions of identical listings.
                             </p>
                             <p>
-                                <strong className="text-foreground">dotSoko changes the paradigm.</strong> We provide merchants with the direct-to-consumer storefront tools they need to stand out, while plugging them into a massive, social-feed-driven ecosystem where buyers can organically discover, share, and purchase their products.
+                                <strong className="text-foreground">Chavania changes the paradigm.</strong> We provide merchants with the direct-to-consumer storefront tools they need to stand out, while plugging them into a massive, social-feed-driven ecosystem where buyers can organically discover, share, and purchase their products.
                             </p>
                         </div>
 
@@ -227,7 +227,7 @@ export default function AboutPage() {
                                 Set up a fully customized storefront in minutes. Get access to built-in marketing tools, detailed analytics, and integrated logistics, allowing you to focus on what you do best: creating great products.
                             </p>
                             <ul className="space-y-4 mb-10">
-                                {['Customizable Brand Storefronts', 'Integrated sokoExpress fulfillment', 'Lower transaction fees', 'Direct customer engagement tools'].map((item, i) => (
+                                {['Customizable Brand Storefronts', 'Integrated chavaniaExpress fulfillment', 'Lower transaction fees', 'Direct customer engagement tools'].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-sm font-medium">
                                         <Sparkles className="w-5 h-5 text-secondary" /> {item}
                                     </li>

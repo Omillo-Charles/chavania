@@ -29,7 +29,7 @@ const SUPPORT_CATEGORIES = [
   },
   {
     title: "Shipping & Delivery",
-    description: "Delivery times, tracking issues, and sokoExpress.",
+    description: "Delivery times, tracking issues, and chavaniaExpress.",
     icon: Truck,
     color: "from-orange-500/10 to-orange-600/5",
     iconColor: "text-orange-500",
@@ -79,7 +79,7 @@ const POPULAR_ARTICLES = [
     category: "Returns & Refunds"
   },
   {
-    title: "Understanding sokoExpress fulfillment",
+    title: "Understanding chavaniaExpress fulfillment",
     category: "Shipping & Delivery"
   },
   {

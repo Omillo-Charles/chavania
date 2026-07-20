@@ -55,7 +55,7 @@ export default function Navbar() {
       <div className="hidden lg:flex w-full bg-muted/30 py-1.5 px-6 items-center justify-between text-xs text-muted-foreground border-b border-border/50">
         {/* Left Content */}
         <div className="flex items-center gap-2">
-          <span className="text-primary font-medium font-ubuntu">Welcome to .soko!</span>
+          <span className="text-primary font-medium font-ubuntu">Welcome to chavania!</span>
           <span className="hidden xl:inline-block">Enjoy free shipping on all orders over KES 30,000.</span>
         </div>
 
@@ -63,7 +63,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Link href="/support" className="flex items-center gap-1 hover:text-primary transition-colors">
             <HelpCircle className="w-3.5 h-3.5" />
-            <span>.sokosupport</span>
+            <span>chavaniasupport</span>
           </Link>
           <span>|</span>
           <Link href="/contact" className="hover:text-primary transition-colors">
@@ -84,7 +84,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <span className="text-3xl font-bold tracking-tighter font-segoe text-primary">
-              <span className="text-secondary">.</span>soko
+              chavania
             </span>
           </Link>
 
@@ -184,7 +184,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
               <span className="text-3xl font-bold tracking-tighter font-segoe text-primary">
-                <span className="text-secondary">.</span>soko
+                chavania
               </span>
             </Link>
 

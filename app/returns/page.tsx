@@ -46,7 +46,7 @@ const RETURN_STEPS = [
 
 const RETURN_FAQS = [
     {
-        question: "What is dotSoko's return policy?",
+        question: "What is Chavania's return policy?",
         answer: "You can return most items within 30 days of delivery for a full refund or exchange. Items must be in their original condition with all tags and packaging intact. Some items like personalized products, perishables, and intimate apparel may be non-returnable."
     },
     {

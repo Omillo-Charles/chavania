@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "dotSoko",
-  description: "dotSoko is a platform that connects local and international merchants with buyers, enabling borderless trade.",
+  title: "Chavania",
+  description: "Chavania is a platform that connects local and international merchants with buyers, enabling borderless trade.",
 };
 
 export default function RootLayout({

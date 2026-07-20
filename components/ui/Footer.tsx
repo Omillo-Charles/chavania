@@ -20,7 +20,7 @@ const FOOTER_LINKS = [
   {
     title: "Sell & Integrate",
     links: [
-      { label: "Sell on dotSoko", href: "/sell" },
+      { label: "Sell on Chavania", href: "/sell" },
       { label: "Merchant Dashboard", href: "/profile/auth?tab=signup" },
       { label: "Developer API Docs", href: "/docs/api" },
       { label: "Logistics Hub", href: "/logistics" },
@@ -30,7 +30,7 @@ const FOOTER_LINKS = [
   {
     title: "Support & Help",
     links: [
-      { label: "dotSoko Support", href: "/support" },
+      { label: "Chavania Support", href: "/support" },
       { label: "Track Your Order", href: "/track" },
       { label: "Returns & Exchanges", href: "/returns" },
       { label: "Contact Us", href: "/contact" },
@@ -40,7 +40,7 @@ const FOOTER_LINKS = [
   {
     title: "Company",
     links: [
-      { label: "About dotSoko", href: "/about" },
+      { label: "About Chavania", href: "/about" },
       { label: "Careers (Hiring!)", href: "/careers" },
       { label: "Press Room", href: "/press" },
       { label: "Sustainability", href: "/sustainability" },
@@ -75,7 +75,7 @@ export default function Footer() {
           <div className="lg:col-span-5 space-y-4">
             <Link href="/" className="inline-block">
               <span className="text-3xl font-bold tracking-tighter font-segoe text-primary">
-                <span className="text-secondary">.</span>soko
+                chavania
               </span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-md leading-relaxed">
@@ -116,7 +116,7 @@ export default function Footer() {
             <div className="bg-background border border-border rounded-2xl p-6 lg:p-8 shadow-sm">
               <h3 className="text-base lg:text-lg font-bold font-ubuntu text-foreground mb-2 flex items-center gap-2">
                 <Mail className="w-4 h-4 text-primary" />
-                Subscribe to dotSoko Merchant & Platform updates
+                Subscribe to Chavania Merchant & Platform updates
               </h3>
               <p className="text-xs lg:text-sm text-muted-foreground mb-4">
                 Get weekly tips on scale, new feature rollouts, API updates, and seller guides. Unsubscribe anytime.
@@ -192,7 +192,7 @@ export default function Footer() {
 
           {/* Copyright & Core Links */}
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-2">
-            <span>© {new Date().getFullYear()} dotSoko Inc. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} Chavania Inc. All rights reserved.</span>
             <span className="hidden md:inline">|</span>
             <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
             <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>

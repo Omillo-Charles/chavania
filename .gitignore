@@ -41,5 +41,5 @@ yarn-error.log*
 next-env.d.ts
 
 # backend files and folders
-dotSokoAPI
-/dotSokoAPI
+chavaniaAPI
+/chavaniaAPI

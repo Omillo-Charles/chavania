@@ -69,7 +69,7 @@ export default function MerchantMessagesPage() {
           </div>
           <div>
             <h5 className="text-sm font-bold text-foreground">Buyer Protection</h5>
-            <p className="text-[10px] text-muted-foreground leading-relaxed">Keep all conversations on dotSoko to stay protected by our policies.</p>
+            <p className="text-[10px] text-muted-foreground leading-relaxed">Keep all conversations on Chavania to stay protected by our policies.</p>
           </div>
         </div>
       </div>

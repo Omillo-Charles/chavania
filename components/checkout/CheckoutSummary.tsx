@@ -66,7 +66,7 @@ export default function CheckoutSummary() {
             <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-2xl border border-border">
                 <ShieldCheck className="w-5 h-5 text-green-600 shrink-0" />
                 <p className="text-[10px] text-muted-foreground leading-relaxed font-medium">
-                    Your transaction is encrypted and secure. <span className="text-foreground font-bold">dotSoko</span> does not store your full payment details.
+                    Your transaction is encrypted and secure. <span className="text-foreground font-bold">Chavania</span> does not store your full payment details.
                 </p>
             </div>
         </div>

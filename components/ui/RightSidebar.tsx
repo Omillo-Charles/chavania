@@ -91,7 +91,7 @@ export default function RightSidebar() {
         <a href="#" className="hover:underline">Cookie Policy</a>
         <a href="#" className="hover:underline">Accessibility</a>
         <a href="#" className="hover:underline">Ads info</a>
-        <span>© 2026 dotSoko Inc.</span>
+        <span>© 2026 Chavania Inc.</span>
       </div>
 
     </aside>

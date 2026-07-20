@@ -93,7 +93,7 @@ export default function ProductDisplay({ post }: ProductDisplayProps) {
       <article className="px-6 py-5 border-b border-border flex items-center justify-between bg-muted/20 text-muted-foreground text-sm font-ubuntu">
         <div className="flex items-center gap-2">
           <span className="font-bold text-foreground">{post.handle}</span>
-          <span>is blocked. You won't see their listings.</span>
+          <span>is blocked. You won&apos;t see their listings.</span>
         </div>
         <button
           onClick={(e) => {
@@ -112,7 +112,7 @@ export default function ProductDisplay({ post }: ProductDisplayProps) {
     return (
       <article className="px-6 py-5 border-b border-border flex items-center justify-between bg-muted/20 text-muted-foreground text-sm font-ubuntu">
         <div className="flex items-center gap-2">
-          <span>You reported this listing. Thanks for helping us keep dotSoko safe.</span>
+          <span>You reported this listing. Thanks for helping us keep Chavania safe.</span>
         </div>
         <button
           onClick={(e) => {

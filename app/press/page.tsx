@@ -42,20 +42,20 @@ const PRESS_RESOURCES = [
 
 const PRESS_FAQS = [
   {
-    question: "How do I request an interview with dotSoko leadership?",
-    answer: "To request an interview with a member of our leadership team, please email us at press@dotsoko.com with your request, including details about your media outlet, the topic you'd like to discuss, and your deadline. We'll get back to you as soon as possible."
+    question: "How do I request an interview with Chavania leadership?",
+    answer: "To request an interview with a member of our leadership team, please email us at press@chavania.com with your request, including details about your media outlet, the topic you'd like to discuss, and your deadline. We'll get back to you as soon as possible."
   },
   {
-    question: "Can I use dotSoko's logos and brand assets?",
+    question: "Can I use Chavania's logos and brand assets?",
     answer: "Yes! You can download our official brand assets from our press kit. Please follow our brand guidelines when using our logos and trademarks."
   },
   {
-    question: "Does dotSoko accept guest post contributions?",
-    answer: "We're always open to collaboration opportunities! Please send your pitch to press@dotsoko.com with details about your idea and audience reach."
+    question: "Does Chavania accept guest post contributions?",
+    answer: "We're always open to collaboration opportunities! Please send your pitch to press@chavania.com with details about your idea and audience reach."
   },
   {
     question: "How do I subscribe to press releases?",
-    answer: "You can subscribe to our press releases by sending an email to press@dotsoko.com with 'Subscribe' in the subject line."
+    answer: "You can subscribe to our press releases by sending an email to press@chavania.com with 'Subscribe' in the subject line."
   }
 ];
 
@@ -63,13 +63,13 @@ const MEDIA_CONTACTS = [
   {
     name: "Sarah Johnson",
     role: "Head of Communications",
-    email: "sarah.j@dotsoko.com",
+    email: "sarah.j@chavania.com",
     phone: "+254 (0) 700 123 456"
   },
   {
     name: "Michael Chen",
     role: "PR Manager",
-    email: "michael.c@dotsoko.com",
+    email: "michael.c@chavania.com",
     phone: "+254 (0) 700 987 654"
   }
 ];
@@ -78,7 +78,7 @@ const KEY_MILESTONES = [
   {
     date: "June 2026",
     title: "Company Founded",
-    description: "dotSoko launched with a vision to democratize digital commerce for local businesses."
+    description: "Chavania launched with a vision to democratize digital commerce for local businesses."
   },
   {
     date: "March 2027",
@@ -87,7 +87,7 @@ const KEY_MILESTONES = [
   },
   {
     date: "September 2027",
-    title: "sokoExpress Launch",
+    title: "chavaniaExpress Launch",
     description: "Launched integrated logistics network across East Africa."
   },
   {
@@ -123,7 +123,7 @@ export default function PressPage() {
           </h1>
           
           <p className="text-muted-foreground text-lg lg:text-xl max-w-2xl mx-auto font-sans leading-relaxed">
-            Welcome to the dotSoko press room. Find press releases, brand assets, and media contacts.
+            Welcome to the Chavania press room. Find press releases, brand assets, and media contacts.
           </p>
         </div>
       </section>
@@ -133,7 +133,7 @@ export default function PressPage() {
         <div className="text-center mb-12">
           <h2 className="text-2xl lg:text-3xl font-bold font-ubuntu mb-3">Press Resources</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to cover dotSoko
+            Everything you need to cover Chavania
           </p>
         </div>
 
@@ -199,7 +199,7 @@ export default function PressPage() {
               </div>
 
               <div className="mt-4">
-                <p className="text-sm text-muted-foreground mb-3">General inquiries: <a href="mailto:press@dotsoko.com" className="text-primary font-medium hover:underline">press@dotsoko.com</a></p>
+                <p className="text-sm text-muted-foreground mb-3">General inquiries: <a href="mailto:press@chavania.com" className="text-primary font-medium hover:underline">press@chavania.com</a></p>
               </div>
             </div>
 
@@ -276,7 +276,7 @@ export default function PressPage() {
         <div className="mt-12 text-center pt-8 border-t border-border">
           <p className="text-muted-foreground mb-4">Still have questions?</p>
           <Link
-            href="mailto:press@dotsoko.com"
+            href="mailto:press@chavania.com"
             className="inline-flex items-center gap-2 px-6 py-2.5 border border-border rounded-xl hover:bg-muted/50 transition-colors font-medium"
           >
             Email Us

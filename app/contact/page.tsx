@@ -12,7 +12,7 @@ const CONTACT_DEPARTMENTS = [
   {
     title: "Buyer Support",
     description: "Assistance with orders, payments, returns, and buyer account issues.",
-    email: "support@dotsoko.com",
+    email: "support@chavania.com",
     phone: "+254 (0) 700 123 456",
     hours: "24/7 Support via live chat & email",
     icon: User,
@@ -23,7 +23,7 @@ const CONTACT_DEPARTMENTS = [
   {
     title: "Merchant & Seller Hub",
     description: "Resources and support for shops, independent sellers, and brand partners.",
-    email: "merchant@dotsoko.com",
+    email: "merchant@chavania.com",
     phone: "+254 (0) 700 987 654",
     hours: "Mon - Fri, 8:00 AM - 6:00 PM EAT",
     icon: Store,
@@ -34,8 +34,8 @@ const CONTACT_DEPARTMENTS = [
   {
     title: "Partnerships & API",
     description: "Integrations, payment gateway cooperations, and logistics partnerships.",
-    email: "partners@dotsoko.com",
-    phone: "partnerships.dotsoko (Skype)",
+    email: "partners@chavania.com",
+    phone: "partnerships.chavania (Skype)",
     hours: "Response within 24 business hours",
     icon: Building,
     color: "from-purple-500/10 to-purple-600/5",
@@ -45,7 +45,7 @@ const CONTACT_DEPARTMENTS = [
   {
     title: "Corporate & Press",
     description: "Media inquiries, corporate announcements, and investor relations.",
-    email: "press@dotsoko.com",
+    email: "press@chavania.com",
     phone: "+254 (0) 722 000 111",
     hours: "Mon - Fri, 9:00 AM - 5:00 PM GMT",
     icon: ShieldCheck,
@@ -57,28 +57,28 @@ const CONTACT_DEPARTMENTS = [
 
 const FAQS = [
   {
-    question: "Welcome to .soko!",
+    question: "Welcome to chavania!",
     answer: "Enjoy free shipping on all orders over KES 5,000."
   },
   {
-    question: "How do I start selling on dotSoko?",
+    question: "How do I start selling on Chavania?",
     answer: "Getting started is simple! Click the 'Profile' icon in the navbar, toggle to 'Sign Up', and select 'Merchant Account'. Once your email and business details are verified, you can immediately begin listing products and customized store configurations."
   },
   {
-    question: "How does dotSoko compare to Shopify or Amazon?",
-    answer: "dotSoko merges the localized direct-to-consumer storefront tools of Shopify with the social feed discovery and logistics infrastructure of Amazon. It empowers merchants with complete customizability, lower transaction fees, and interactive client feeds where buyers can directly comment, share, and buy products."
+    question: "How does Chavania compare to Shopify or Amazon?",
+    answer: "Chavania merges the localized direct-to-consumer storefront tools of Shopify with the social feed discovery and logistics infrastructure of Amazon. It empowers merchants with complete customizability, lower transaction fees, and interactive client feeds where buyers can directly comment, share, and buy products."
   },
   {
     question: "What payment gateways are supported?",
     answer: "We support a wide array of payment channels tailored for diverse markets, including M-Pesa, card payments (Visa, Mastercard), bank transfers, and standard digital wallets. All payments are secured with end-to-end encryption and buyer protection escrow."
   },
   {
-    question: "What is dotSoko's Buyer Protection policy?",
+    question: "What is Chavania's Buyer Protection policy?",
     answer: "Buyer Protection guarantees that your funds are kept in escrow until the shipping tracking confirms successful delivery and you verify that the items match the seller's description. If there's an issue, you can raise a dispute within 48 hours for a full refund."
   },
   {
     question: "How is delivery and logistics handled?",
-    answer: "Sellers can choose to fulfill orders independently, use integrated local couriers, or opt for dotSoko Fulfillment (sokoExpress). For buyers, shipping choices and estimated delivery times are clearly calculated during checkout."
+    answer: "Sellers can choose to fulfill orders independently, use integrated local couriers, or opt for Chavania Fulfillment (chavaniaExpress). For buyers, shipping choices and estimated delivery times are clearly calculated during checkout."
   }
 ];
 
@@ -134,7 +134,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
             <MessageSquare className="w-3.5 h-3.5" />
-            <span>Connect with .soko</span>
+            <span>Connect with chavania</span>
           </div>
           
           <h1 className="text-4xl lg:text-6xl font-bold tracking-tight font-ubuntu mb-6 max-w-3xl mx-auto leading-tight">
@@ -203,7 +203,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-2xl font-bold font-ubuntu mb-3">Message Sent Successfully!</h3>
                 <p className="text-muted-foreground max-w-md mb-8">
-                  Thank you for reaching out to .soko. Our team has received your ticket and will get back to you within 24 hours.
+                  Thank you for reaching out to Chavania. Our team has received your ticket and will get back to you within 24 hours.
                 </p>
                 <button
                   onClick={() => setFormStatus('idle')}

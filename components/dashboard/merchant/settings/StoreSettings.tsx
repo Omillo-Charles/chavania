@@ -54,7 +54,7 @@ export default function StoreSettings() {
             </label>
             <div className="flex">
               <span className="px-3 py-2.5 bg-muted/50 border border-r-0 border-border rounded-l-xl text-xs font-medium text-muted-foreground flex items-center">
-                dotsoko.ke/
+                chavania.com/
               </span>
               <input 
                 type="text" 

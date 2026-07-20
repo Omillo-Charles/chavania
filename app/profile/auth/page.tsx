@@ -90,7 +90,7 @@ export default function AuthPage() {
         {/* Logo */}
         <div className="text-center pt-8 pb-4 px-8">
           <h1 className="text-3xl font-bold tracking-tighter font-segoe text-primary mb-1">
-            <span className="text-secondary">.</span>soko
+            chavania
           </h1>
           <p className="text-muted-foreground text-sm">
             {tab === "signin" ? "Welcome back! Sign in to continue" : "Create your free account today"}

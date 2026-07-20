@@ -67,7 +67,7 @@ export default function MerchantPayoutSettings() {
                     <div className="space-y-1">
                         <h4 className="text-sm font-bold text-foreground">Payout Information</h4>
                         <p className="text-xs text-muted-foreground leading-relaxed">
-                            Standard payouts are processed every Monday at 10:00 AM EAT. Ensure your primary payout method is verified to avoid delays. dotSoko charges a flat <span className="text-foreground font-bold">2.5%</span> transaction fee on all successful sales.
+                            Standard payouts are processed every Monday at 10:00 AM EAT. Ensure your primary payout method is verified to avoid delays. Chavania charges a flat <span className="text-foreground font-bold">2.5%</span> transaction fee on all successful sales.
                         </p>
                     </div>
                 </div>

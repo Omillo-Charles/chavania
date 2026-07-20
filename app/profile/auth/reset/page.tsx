@@ -57,7 +57,7 @@ export default function ResetPasswordPage() {
         {/* Logo */}
         <div className="text-center pt-4 pb-6 px-8">
           <h1 className="text-3xl font-bold tracking-tighter font-segoe text-primary mb-1">
-            <span className="text-secondary">.</span>soko
+            chavania
           </h1>
         </div>
 

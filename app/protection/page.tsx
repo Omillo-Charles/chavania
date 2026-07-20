@@ -77,8 +77,8 @@ const HOW_IT_WORKS = [
 
 const PROTECTION_FAQS = [
   {
-    question: "What is dotSoko Buyer Protection?",
-    answer: "dotSoko Buyer Protection is a comprehensive program that protects your purchases from the moment you place an order until you're completely satisfied. Your payment is held securely in escrow until you confirm that your order has been received and is as described."
+    question: "What is Chavania Buyer Protection?",
+    answer: "Chavania Buyer Protection is a comprehensive program that protects your purchases from the moment you place an order until you're completely satisfied. Your payment is held securely in escrow until you confirm that your order has been received and is as described."
   },
   {
     question: "What does Buyer Protection cover?",
@@ -165,7 +165,7 @@ export default function ProtectionPage() {
         <div className="text-center mb-12">
           <h2 className="text-2xl lg:text-3xl font-bold font-ubuntu mb-3">What You Get</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive protection for every purchase on dotSoko.
+            Comprehensive protection for every purchase on Chavania.
           </p>
         </div>
 
@@ -359,7 +359,7 @@ export default function ProtectionPage() {
           <ShieldCheck className="w-16 h-16 text-primary mx-auto mb-6" />
           <h2 className="text-3xl font-bold font-ubuntu mb-4">Ready to shop with confidence?</h2>
           <p className="text-muted-foreground mb-8 leading-relaxed">
-            Every purchase on dotSoko is automatically covered by our Buyer Protection program. Start shopping today!
+            Every purchase on Chavania is automatically covered by our Buyer Protection program. Start shopping today!
           </p>
           <Link
             href="/categories"

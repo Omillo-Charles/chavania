@@ -51,7 +51,7 @@ export default function CartSummary() {
       <div className="flex items-center gap-3 p-4 bg-primary/5 rounded-2xl border border-primary/10">
         <ShieldCheck className="w-5 h-5 text-primary shrink-0" />
         <p className="text-[10px] text-muted-foreground leading-relaxed font-medium">
-          Your payment is secured by <span className="text-primary font-bold">dotSoko Buyer Protection</span>. Funds are only released after delivery confirmation.
+          Your payment is secured by <span className="text-primary font-bold">Chavania Buyer Protection</span>. Funds are only released after delivery confirmation.
         </p>
       </div>
     </div>
