@@ -188,24 +188,42 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section: Copyright & Regional */}
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
+        <div className="border-t border-border pt-8 flex flex-col items-center gap-4 text-xs text-muted-foreground">
 
-          {/* Copyright & Core Links */}
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-2">
-            <span>© {new Date().getFullYear()} Chavania Inc. All rights reserved.</span>
-            <span className="hidden md:inline">|</span>
-            <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
-            <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="/cookies" className="hover:text-primary transition-colors">Cookie Settings</Link>
-            <Link href="/security" className="hover:text-primary transition-colors">Security Audit</Link>
+          {/* Top row: Copyright & Regional */}
+          <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4">
+
+            {/* Copyright & Core Links */}
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-2">
+              <span>© {new Date().getFullYear()} Chavania Inc. All rights reserved.</span>
+              <span className="hidden md:inline">|</span>
+              <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+              <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+              <Link href="/cookies" className="hover:text-primary transition-colors">Cookie Settings</Link>
+              <Link href="/security" className="hover:text-primary transition-colors">Security Audit</Link>
+            </div>
+
+            {/* Regional Settings */}
+            <div className="flex items-center gap-2 border border-border bg-background rounded-full px-3.5 py-1.5 cursor-pointer hover:border-primary/35 transition-colors">
+              <Globe className="w-3.5 h-3.5" />
+              <span className="font-semibold text-foreground">English (KE)</span>
+              <span className="text-[10px]">|</span>
+              <span>KES</span>
+            </div>
+
           </div>
 
-          {/* Regional Settings */}
-          <div className="flex items-center gap-2 border border-border bg-background rounded-full px-3.5 py-1.5 cursor-pointer hover:border-primary/35 transition-colors">
-            <Globe className="w-3.5 h-3.5" />
-            <span className="font-semibold text-foreground">English (KE)</span>
-            <span className="text-[10px]">|</span>
-            <span>KES</span>
+          {/* Developer Credit */}
+          <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground/70 select-none">
+            <span>Built &amp; maintained by</span>
+            <a
+              href="https://omytech.co.ke"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-primary/80 hover:text-primary transition-colors duration-200 tracking-wide"
+            >
+              OMYT3CH
+            </a>
           </div>
 
         </div>

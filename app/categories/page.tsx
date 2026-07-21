@@ -5,10 +5,11 @@ import { CATEGORIES } from '@/utils/categories';
 import Link from 'next/link';
 import { ArrowRight, LayoutGrid, ArrowLeft } from 'lucide-react';
 import Searchbar from '@/components/features/Searchbar';
+import Footer from '@/components/ui/Footer';
 
 export default function CategoriesPage() {
   return (
-    <div className="min-h-screen bg-muted/30 pb-20">
+    <div className="min-h-screen bg-muted/30 flex flex-col">
       {/* Categories Header */}
       <div className="bg-background border-b border-border sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
@@ -32,7 +33,7 @@ export default function CategoriesPage() {
         </div>
       </div>
 
-      <main className="max-w-7xl mx-auto px-4 lg:px-8 py-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
+      <main className="flex-1 max-w-7xl mx-auto w-full px-4 lg:px-8 py-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
         {/* Intro Text */}
         <div className="mb-10">
           <p className="text-muted-foreground text-lg max-w-2xl">
@@ -73,30 +74,9 @@ export default function CategoriesPage() {
             </Link>
           ))}
         </div>
-
-        {/* Featured Collections / Banner */}
-        <div className="mt-20 p-10 rounded-[40px] bg-primary text-white relative overflow-hidden group">
-          <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-10">
-            <div className="max-w-2xl space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold font-ubuntu leading-tight">
-                Can't find what you're looking for?
-              </h2>
-              <p className="text-blue-50/80 text-lg">
-                Our marketplace is constantly growing with new sellers and unique items. Try searching for specific brands or local stores.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-4 shrink-0">
-              <button className="px-8 py-3 bg-white text-primary rounded-2xl font-bold hover:bg-blue-50 transition-colors shadow-lg">
-                Visit All Stores
-              </button>
-              <button className="px-8 py-3 border border-white/30 text-white rounded-2xl font-bold hover:bg-white/10 transition-all">
-                Contact Support
-              </button>
-            </div>
-          </div>
-        </div>
       </main>
+
+      <Footer />
     </div>
   );
 }

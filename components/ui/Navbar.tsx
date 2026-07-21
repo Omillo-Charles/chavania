@@ -232,11 +232,11 @@ export default function Navbar() {
                   </div>
                 )}
               </div>
-              <Link href="/wishlist" className="text-muted-foreground hover:text-primary transition-colors relative">
+              <Link href="/profile/buyer/wishlist" className="text-muted-foreground hover:text-primary transition-colors relative">
                 <Bookmark className="w-6 h-6" />
                 <span className="absolute -top-1.5 -right-1.5 bg-secondary text-secondary-foreground text-[9px] font-bold w-4 h-4 flex items-center justify-center rounded-full">0</span>
               </Link>
-              <Link href="/cart" className="text-muted-foreground hover:text-primary transition-colors relative">
+              <Link href="/profile/buyer/cart" className="text-muted-foreground hover:text-primary transition-colors relative">
                 <ShoppingCart className="w-6 h-6" />
                 <span className="absolute -top-1.5 -right-1.5 bg-primary text-primary-foreground text-[9px] font-bold w-4 h-4 flex items-center justify-center rounded-full">0</span>
               </Link>
