@@ -204,9 +204,9 @@ export default function AuthPage() {
                 <input type="checkbox" className="mt-0.5 rounded border-border text-primary focus:ring-primary" />
                 <span>
                   I agree to the{" "}
-                  <a href="#" className="text-primary hover:underline font-medium">Terms of Service</a>{" "}
+                  <Link href="/terms" className="text-primary hover:underline font-medium">Terms of Service</Link>{" "}
                   and{" "}
-                  <a href="#" className="text-primary hover:underline font-medium">Privacy Policy</a>
+                  <Link href="/privacy" className="text-primary hover:underline font-medium">Privacy Policy</Link>
                 </span>
               </label>
               <button
