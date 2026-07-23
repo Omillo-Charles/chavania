@@ -1,3 +1,5 @@
+import { LucideIcon, Cookie, ClipboardList, Link2, Settings, CalendarDays } from "lucide-react";
+
 export interface Section {
   heading: string;
   body: string[];
@@ -6,7 +8,7 @@ export interface Section {
 export interface Tab {
   id: string;
   label: string;
-  icon: string;
+  icon: LucideIcon;
   intro: string;
   sections: Section[];
 }
@@ -23,7 +25,7 @@ export const TABS: Tab[] = [
   {
     id: "about",
     label: "About Cookies",
-    icon: "🍪",
+    icon: Cookie,
     intro:
       "This Cookie Policy explains what cookies and similar tracking technologies are, how Chavania uses them, and the choices available to you. It should be read alongside our Privacy Policy and Terms of Service.",
     sections: [
@@ -57,7 +59,7 @@ export const TABS: Tab[] = [
   {
     id: "types",
     label: "Cookies We Use",
-    icon: "📋",
+    icon: ClipboardList,
     intro:
       "We group the cookies used on the Chavania platform into four categories based on their purpose. The table below describes each category, gives examples of cookies in that category, and indicates whether they require your consent.",
     sections: [
@@ -106,7 +108,7 @@ export const TABS: Tab[] = [
   {
     id: "third-party",
     label: "Third-Party Cookies",
-    icon: "🔗",
+    icon: Link2,
     intro:
       "Some cookies on the Chavania platform are set by third-party services we use. These third parties have their own privacy and cookie policies, which we encourage you to review. We only permit third-party cookies from services that provide essential functionality or that you have consented to.",
     sections: [
@@ -153,7 +155,7 @@ export const TABS: Tab[] = [
   {
     id: "control",
     label: "Managing Cookies",
-    icon: "⚙️",
+    icon: Settings,
     intro:
       "You have several ways to control the cookies placed on your device. Below we explain your options, from our in-platform consent tools to browser-level and opt-out controls. Note that disabling certain cookies may affect the functionality of the Chavania platform.",
     sections: [
@@ -203,7 +205,7 @@ export const TABS: Tab[] = [
   {
     id: "retention",
     label: "Retention & Updates",
-    icon: "📅",
+    icon: CalendarDays,
     intro:
       "This section covers how long specific cookies are retained on your device and how we handle updates to this Cookie Policy.",
     sections: [

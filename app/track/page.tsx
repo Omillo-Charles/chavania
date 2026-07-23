@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ArrowLeft, Package, Truck, MapPin, Calendar, ExternalLink, HelpCircle, Store, CheckCircle2, Clock } from 'lucide-react';
 import TrackingSearch from '@/components/track/TrackingSearch';
 import OrderDetails from '@/components/track/OrderDetails';
+import Footer from '@/components/ui/Footer';
 
 export default function TrackPage() {
   const [isLoading, setIsLoading] = useState(false);
@@ -23,7 +24,7 @@ export default function TrackPage() {
   };
 
   return (
-    <div className="min-h-screen bg-muted/30 pb-20">
+    <div className="min-h-screen bg-muted/30 flex flex-col">
       {/* Header */}
       <div className="bg-background border-b border-border sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
@@ -83,6 +84,7 @@ export default function TrackPage() {
           </div>
         )}
       </main>
+      <Footer />
     </div>
   );
 }

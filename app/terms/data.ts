@@ -1,3 +1,5 @@
+import { LucideIcon, ClipboardList, ShoppingBag, Store, Settings } from "lucide-react";
+
 export interface Section {
   heading: string;
   body: string[];
@@ -6,7 +8,7 @@ export interface Section {
 export interface Tab {
   id: string;
   label: string;
-  icon: string;
+  icon: LucideIcon;
   intro: string;
   sections: Section[];
 }
@@ -23,7 +25,7 @@ export const TABS: Tab[] = [
   {
     id: "general",
     label: "General Terms",
-    icon: "📋",
+    icon: ClipboardList,
     intro:
       "These General Terms apply to every person who accesses or uses the Chavania platform in any capacity - whether you are browsing as a guest, purchasing as a buyer, selling as a merchant, or managing the platform as an administrator. By continuing to use Chavania you agree to be bound by all terms set out in this document and any policies incorporated by reference.",
     sections: [
@@ -119,7 +121,7 @@ export const TABS: Tab[] = [
   {
     id: "buyers",
     label: "Buyer Terms",
-    icon: "🛍️",
+    icon: ShoppingBag,
     intro:
       "These Buyer Terms govern your activities as a purchaser on the Chavania platform. They are in addition to the General Terms and apply whenever you browse, add items to cart, place orders, or interact with sellers or their products.",
     sections: [
@@ -167,7 +169,7 @@ export const TABS: Tab[] = [
           "You have the right to return eligible products within 7 days of delivery for a full refund, provided that: (a) the product is in its original, unused condition with all original packaging and accessories; (b) you initiate the return through the Chavania platform; (c) the product is not listed as a non-returnable item.",
           "Non-returnable items include: perishable goods, digital downloads once accessed, intimate apparel, customised or personalised products, hazardous materials, and products explicitly marked as 'Final Sale'.",
           "Defective, damaged, or incorrectly supplied products may be returned for a full refund or replacement regardless of the standard returns window. You must report such issues within 48 hours of delivery with supporting photo or video evidence.",
-          "Refunds are processed within 7–14 business days of receipt and inspection of the returned item. Refunds are issued to the original payment method or Chavania Wallet at your election.",
+          "Refunds are processed within 7-14 business days of receipt and inspection of the returned item. Refunds are issued to the original payment method or Chavania Wallet at your election.",
           "Chavania's Buyer Protection programme covers purchases where the product does not arrive, arrives significantly different from the listing, or arrives damaged. Disputes must be raised within 7 days of the scheduled delivery date.",
           "Return shipping costs are borne by the buyer unless the return is due to a seller error, defect, or Chavania's fulfilment error, in which case Chavania will provide a prepaid return label.",
         ],
@@ -204,7 +206,7 @@ export const TABS: Tab[] = [
   {
     id: "sellers",
     label: "Seller Terms",
-    icon: "🏪",
+    icon: Store,
     intro:
       "These Seller Terms govern your activities as a merchant on the Chavania platform. They apply in addition to the General Terms and take effect from the moment your seller account is activated. Selling on Chavania is a privilege that comes with significant responsibilities - please read these terms carefully.",
     sections: [
@@ -303,7 +305,7 @@ export const TABS: Tab[] = [
   {
     id: "administrators",
     label: "Administrator Terms",
-    icon: "⚙️",
+    icon: Settings,
     intro:
       "These Administrator Terms apply to all individuals granted administrative access to the Chavania platform, including internal Chavania staff, contracted moderators, partner integrators, and any person with elevated system privileges. Administrator access carries the highest level of responsibility and these terms must be strictly adhered to at all times.",
     sections: [
@@ -322,81 +324,6 @@ export const TABS: Tab[] = [
           "You may not disclose confidential information to any third party without prior written authorisation from Chavania's Chief Executive Officer or Legal Counsel.",
           "Confidentiality obligations survive the termination of your administrative access for a period of 5 years, or indefinitely in the case of trade secrets.",
           "Where applicable, administrators must also sign a separate Non-Disclosure Agreement (NDA) as a condition of access.",
-        ],
-      },
-      {
-        heading: "3. Data Handling & Privacy",
-        body: [
-          "Administrators with access to user personal data must comply fully with the Kenya Data Protection Act 2019, Chavania's internal Data Handling Policy, and any other applicable data protection regulations.",
-          "Personal data may only be accessed for legitimate, documented business purposes. Accessing user data out of curiosity, for personal use, or for any purpose not authorised by your role is prohibited.",
-          "Administrators must never share user personal data - including names, email addresses, phone numbers, payment information, or order history - with unauthorised persons inside or outside the organisation.",
-          "All data access is logged and subject to regular audits. Suspicious access patterns will trigger an immediate security review.",
-          "In the event of a data breach or suspected breach you are aware of, you must report it to the Data Protection Officer (dpo@chavania.com) within 1 hour of becoming aware.",
-        ],
-      },
-      {
-        heading: "4. System Security",
-        body: [
-          "Administrators must use strong, unique passwords and multi-factor authentication (MFA) for all administrative accounts. Password sharing between administrators is strictly prohibited.",
-          "Administrative access must not be exercised from unsecured, public, or shared networks without the use of Chavania's approved VPN.",
-          "Administrator devices must have up-to-date operating systems, antivirus software, and full-disk encryption enabled.",
-          "Administrators must lock or log out of administrative sessions whenever leaving their workstation.",
-          "Any attempt to compromise platform security - including penetration testing without written authorisation - is prohibited and will result in immediate termination and potential criminal prosecution.",
-        ],
-      },
-      {
-        heading: "5. Moderation Responsibilities",
-        body: [
-          "Content moderators are responsible for reviewing and acting on reports of prohibited listings, user-generated content violations, counterfeit goods, and policy breaches in accordance with Chavania's Content Moderation Policy.",
-          "Moderation decisions must be based on established platform policies, not personal bias. Discriminatory moderation based on race, gender, religion, nationality, or any other protected characteristic is prohibited.",
-          "Where a moderation decision is unclear, the matter must be escalated to a senior moderator or the compliance team rather than making an arbitrary decision.",
-          "Moderators must document all enforcement actions taken, including the reason for the action, the evidence reviewed, and the outcome, using the moderation management system.",
-          "Moderators who receive credible threats from users must immediately report the matter to the security team and must not engage with the threatening party unilaterally.",
-        ],
-      },
-      {
-        heading: "6. Financial Administration",
-        body: [
-          "Financial administrators with access to payout systems, fund transfers, refund processing, and fee adjustments must operate strictly within their authorisation limits.",
-          "All financial adjustments above defined thresholds require dual approval. No single administrator may unilaterally process high-value payments or refunds.",
-          "Administrators may not use platform systems to process transactions for personal benefit, family members, friends, or any entity in which they hold a financial interest.",
-          "All financial actions are subject to real-time fraud detection systems and retrospective audit. Any discrepancy must be reported immediately.",
-          "Financial misconduct - including embezzlement, manipulation of payout systems, or falsification of financial records - will result in immediate termination, criminal prosecution, and civil recovery action.",
-        ],
-      },
-      {
-        heading: "7. Seller & Buyer Dispute Management",
-        body: [
-          "Administrators handling disputes must review all available evidence objectively before making a determination. Determinations must be consistent with Chavania's Dispute Resolution Policy.",
-          "Administrators must not accept gifts, payments, or any other benefit from buyers or sellers in exchange for favourable dispute outcomes.",
-          "Dispute decisions must be communicated to all parties clearly and in writing, with an explanation of the reasoning and any available appeal process.",
-          "Complex or high-value disputes (above KES 50,000) must be escalated to the senior dispute resolution team for review.",
-        ],
-      },
-      {
-        heading: "8. Conflict of Interest",
-        body: [
-          "Administrators must disclose any actual or potential conflict of interest to their line manager and the compliance team before taking any action that could be affected by that conflict.",
-          "Examples of conflicts of interest include: managing the account of a seller who is a family member, friend, or business partner; participating in a dispute where you have a financial interest in the outcome; or using your administrative access to benefit your own commercial interests.",
-          "Where a conflict is disclosed, the administrator must recuse themselves from the relevant action and it must be handled by an impartial colleague.",
-        ],
-      },
-      {
-        heading: "9. Access Termination",
-        body: [
-          "Upon the termination of your administrative role - whether through resignation, contract end, or dismissal - all administrative access will be revoked immediately.",
-          "You must return all Chavania devices, documents, and credentials and must not retain any copies of confidential information.",
-          "Post-termination, you remain bound by confidentiality obligations, non-solicitation obligations (no soliciting Chavania staff or users for 12 months), and any non-compete provisions agreed in your employment or contractor agreement.",
-          "Chavania reserves the right to pursue legal action for breach of post-termination obligations.",
-        ],
-      },
-      {
-        heading: "10. Training & Compliance",
-        body: [
-          "All administrators must complete Chavania's onboarding compliance training before being granted system access. Annual refresher training is mandatory.",
-          "Administrators must stay current with updates to platform policies, data protection laws, and security protocols.",
-          "Non-compliance with training requirements will result in suspension of administrative access until requirements are met.",
-          "Chavania may conduct unannounced audits, simulated phishing exercises, and access log reviews at any time to ensure ongoing compliance.",
         ],
       },
     ],

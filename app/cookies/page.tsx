@@ -131,7 +131,7 @@ export default function CookiesPage() {
                     : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                 }`}
               >
-                <span className="text-base">{tab.icon}</span>
+              <tab.icon className="w-5 h-5" />
                 {tab.label}
               </button>
             ))}
@@ -143,7 +143,7 @@ export default function CookiesPage() {
       <main className="flex-1 max-w-6xl mx-auto w-full px-4 lg:px-8 py-10">
         <div className="mb-8 p-6 rounded-2xl bg-primary/5 border border-primary/15">
           <div className="flex items-center gap-3 mb-3">
-            <span className="text-2xl">{currentTab.icon}</span>
+            <currentTab.icon className="w-6 h-6 text-primary" />
             <h2 className="text-xl font-bold font-ubuntu text-foreground">
               {currentTab.label}
             </h2>

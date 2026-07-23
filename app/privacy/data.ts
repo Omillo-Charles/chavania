@@ -1,3 +1,5 @@
+import { LucideIcon, Search, FolderOpen, Settings, Handshake, Scale, Cookie, ShieldCheck } from "lucide-react";
+
 export interface Section {
   heading: string;
   body: string[];
@@ -6,7 +8,7 @@ export interface Section {
 export interface Tab {
   id: string;
   label: string;
-  icon: string;
+  icon: LucideIcon;
   intro: string;
   sections: Section[];
 }
@@ -23,7 +25,7 @@ export const TABS: Tab[] = [
   {
     id: "overview",
     label: "Overview",
-    icon: "🔍",
+    icon: Search,
     intro:
       "This Privacy Policy explains how Chavania Inc. collects, uses, stores, and protects your personal data when you use the Chavania platform. We are committed to transparency and to handling your data with respect. Please read this policy carefully alongside our Terms of Service.",
     sections: [
@@ -73,7 +75,7 @@ export const TABS: Tab[] = [
   {
     id: "collection",
     label: "Data We Collect",
-    icon: "📂",
+    icon: FolderOpen,
     intro:
       "We collect personal data to provide and improve the Chavania platform. We collect only what is necessary and relevant for the purposes described in this policy. Below is a full account of the categories of data we collect and how we obtain them.",
     sections: [
@@ -130,7 +132,7 @@ export const TABS: Tab[] = [
   {
     id: "usage",
     label: "How We Use It",
-    icon: "⚙️",
+    icon: Settings,
     intro:
       "We use the personal data we collect strictly for legitimate, defined purposes. We do not sell your personal data to third parties. The sections below describe each purpose and the legal basis that applies.",
     sections: [
@@ -185,7 +187,7 @@ export const TABS: Tab[] = [
   {
     id: "sharing",
     label: "Sharing & Disclosure",
-    icon: "🤝",
+    icon: Handshake,
     intro:
       "We do not sell, rent, or trade your personal data. We share it only as described below, with appropriate safeguards in place. We require all third parties to respect the security of your data and to treat it in accordance with applicable law.",
     sections: [
@@ -233,7 +235,7 @@ export const TABS: Tab[] = [
   {
     id: "rights",
     label: "Your Rights",
-    icon: "⚖️",
+    icon: Scale,
     intro:
       "Under the Kenya Data Protection Act 2019 and, where applicable, the EU General Data Protection Regulation, you have a number of important rights regarding your personal data. We are committed to facilitating the exercise of these rights promptly and without undue obstacles.",
     sections: [
@@ -293,7 +295,7 @@ export const TABS: Tab[] = [
   {
     id: "cookies",
     label: "Cookies",
-    icon: "🍪",
+    icon: Cookie,
     intro:
       "Chavania uses cookies and similar tracking technologies to operate the platform, remember your preferences, analyse usage, and deliver relevant advertising. This section explains what cookies we use, why we use them, and how you can control them.",
     sections: [
@@ -342,7 +344,7 @@ export const TABS: Tab[] = [
   {
     id: "security",
     label: "Security & Retention",
-    icon: "🛡️",
+    icon: ShieldCheck,
     intro:
       "Protecting your personal data is a core responsibility. We implement robust technical and organisational measures to safeguard your information against unauthorised access, loss, destruction, or alteration. We also apply strict retention policies to ensure data is not kept longer than necessary.",
     sections: [

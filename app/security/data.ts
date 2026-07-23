@@ -1,3 +1,5 @@
+import { LucideIcon, ShieldCheck, KeyRound, CreditCard, Search, CircleCheck } from "lucide-react";
+
 export interface Section {
   heading: string;
   body: string[];
@@ -6,7 +8,7 @@ export interface Section {
 export interface Tab {
   id: string;
   label: string;
-  icon: string;
+  icon: LucideIcon;
   intro: string;
   sections: Section[];
 }
@@ -23,7 +25,7 @@ export const TABS: Tab[] = [
   {
     id: "platform",
     label: "Platform Security",
-    icon: "🛡️",
+    icon: ShieldCheck,
     intro:
       "Chavania is built with security as a foundational principle, not an afterthought. This section describes the technical and operational measures we employ to protect the platform, your data, and every transaction processed on Chavania.",
     sections: [
@@ -75,7 +77,7 @@ export const TABS: Tab[] = [
   {
     id: "account",
     label: "Account Security",
-    icon: "🔐",
+    icon: KeyRound,
     intro:
       "Your Chavania account is your key to the platform. We provide robust tools to help you keep it secure, and we apply behind-the-scenes protections to detect and block unauthorised access attempts.",
     sections: [
@@ -127,7 +129,7 @@ export const TABS: Tab[] = [
   {
     id: "payments",
     label: "Payment Security",
-    icon: "💳",
+    icon: CreditCard,
     intro:
       "Every transaction on Chavania is processed through secure, certified payment infrastructure. We take extensive measures to protect your financial data and to prevent payment fraud.",
     sections: [
@@ -170,7 +172,7 @@ export const TABS: Tab[] = [
   {
     id: "disclosure",
     label: "Responsible Disclosure",
-    icon: "🔍",
+    icon: Search,
     intro:
       "We welcome and value reports from security researchers who identify vulnerabilities in the Chavania platform. Our responsible disclosure programme outlines how to report findings safely, what we ask of researchers, and what you can expect from us in return.",
     sections: [
@@ -213,7 +215,7 @@ export const TABS: Tab[] = [
   {
     id: "best-practices",
     label: "Staying Safe",
-    icon: "✅",
+    icon: CircleCheck,
     intro:
       "Platform security is a shared responsibility. While we invest heavily in protecting the Chavania infrastructure, there are practical steps you can take to significantly reduce your personal risk. This section outlines the most important ones.",
     sections: [
