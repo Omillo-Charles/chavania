@@ -5,6 +5,7 @@ import Link from 'next/link';
 import {
   Globe, Mail, Send, ArrowUpRight, CheckCircle, RefreshCw
 } from 'lucide-react';
+import ChavaniaLogo from './ChavaniaLogo';
 
 const FOOTER_LINKS = [
   {
@@ -73,11 +74,7 @@ export default function Footer() {
 
           {/* Logo & Description */}
           <div className="lg:col-span-5 space-y-4">
-            <Link href="/" className="inline-block">
-              <span className="text-3xl font-bold tracking-tighter font-segoe text-primary">
-                chavania
-              </span>
-            </Link>
+            <ChavaniaLogo />
             <p className="text-muted-foreground text-sm max-w-md leading-relaxed">
               The next-generation social commerce and direct-to-consumer marketplace. Empowering independent brands, local stores, and resellers with full agency over their storefronts, feeds, and customer relationships.
             </p>

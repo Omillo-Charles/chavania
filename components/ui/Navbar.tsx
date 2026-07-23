@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Search, User, Bookmark, ShoppingCart, HelpCircle, Grid, Tag, Store, X, ChevronDown, LayoutDashboard, Store as MerchantIcon, LogOut } from 'lucide-react';
 import ThemeToggle from '../../utils/ThemeToggle';
 import Searchbar from '../features/Searchbar';
+import ChavaniaLogo from './ChavaniaLogo';
 
 export default function Navbar() {
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
@@ -82,11 +83,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center justify-between gap-8">
 
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <span className="text-3xl font-bold tracking-tighter font-segoe text-primary">
-              chavania
-            </span>
-          </Link>
+          <ChavaniaLogo />
 
           {/* Search Bar */}
           <Searchbar
@@ -182,11 +179,7 @@ export default function Navbar() {
           {/* Mobile Top Navbar: Logo + Profile, Wishlist, Cart */}
           <div className="flex items-center justify-between w-full">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0">
-              <span className="text-3xl font-bold tracking-tighter font-segoe text-primary">
-                chavania
-              </span>
-            </Link>
+            <ChavaniaLogo />
 
             {/* Icons */}
             <div className="flex items-center gap-4">
