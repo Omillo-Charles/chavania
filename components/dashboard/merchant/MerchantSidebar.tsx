@@ -14,7 +14,6 @@ import {
     ChevronRight,
     Store,
     CreditCard,
-    MessageSquare
 } from 'lucide-react';
 
 export const MERCHANT_MENU_ITEMS = [
@@ -24,7 +23,6 @@ export const MERCHANT_MENU_ITEMS = [
     { name: 'Customers', icon: Users, href: '/profile/merchant/customers' },
     { name: 'Analytics', icon: BarChart3, href: '/profile/merchant/analytics' },
     { name: 'Payouts', icon: CreditCard, href: '/profile/merchant/payouts' },
-    { name: 'Messages', icon: MessageSquare, href: '/profile/merchant/messages' },
     { name: 'Store Settings', icon: Settings, href: '/profile/merchant/settings' },
 ];
 

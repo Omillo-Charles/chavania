@@ -12,14 +12,6 @@ export default function MerchantDashboardPage() {
       {/* Welcome Section */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="px-2 py-0.5 bg-secondary/10 text-secondary text-[10px] font-bold uppercase tracking-wider rounded-md border border-secondary/20">
-              Active Store
-            </span>
-            <span className="text-muted-foreground text-[10px] font-bold uppercase tracking-wider">
-              • TechHaven Store
-            </span>
-          </div>
           <h1 className="text-3xl font-bold font-ubuntu tracking-tight text-foreground flex items-center gap-3">
             Merchant Dashboard
           </h1>
